@@ -41,4 +41,4 @@ source Stackoverflow
    - I'll talk about each and every code don't worry
 
 
-
+### Now in this i'll not talk about methods,register's etc. things of smali you should read Prof. euzada introduction and smali grammar/table for that purpose in this repository's wiki page
