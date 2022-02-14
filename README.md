@@ -41,4 +41,38 @@ source Stackoverflow
    - I'll talk about each and every code don't worry
 
 
-### Now in this i'll not talk about methods,register's etc. things of smali you should read Prof. euzada introduction and smali grammar/table for that purpose in this repository's wiki page
+### Example
+   Since evrybody takes example of Hello World! in programmimg field i'm going o take also
+   
+   The code in Java :
+                  
+                  class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!"); 
+    }
+    }
+  The code in smali:
+  
+        .class public LHelloWorld;
+        .super Ljava/lang/Object;
+
+    .method public static main([Ljava/lang/String;)V
+    .registers 2
+
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    const-string	v1, "Hello World!"
+
+    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    return-void
+     .end method
+Now let's understand it :
+   - In the Java code and smali the firstline you can understand yourself tat it making the class name the only difference is that in Java we can simply write class HelloWorld{your codes} but in smali for writing we have to pu capital "L" before class name.
+   - the next line in smali:
+        [Ljava.lang.Object; is the name for Object[].class  and .super doing function like calling/storing of it
+
+   - the next line making method which is like our nerves which transfers the data to our brain that what's inside it and that's the thing which the user want's to perform then the brain does the work according to it similarly /method contains the code hich the user wants to perform 
+   - the public word after .method is like the open-source program's that we can overwrite if there was private word then we need to modify it like we get premium apps/software's illegally 
+   - the next line after pyblic calling string function means that we want to display some strings to user's 
+   - tthe )V which we seeing is used to return tyoes in smali for understanding types in smali you can go to <a href="https://github.com/JesusFreke/smali/wiki/TypesMethodsAndFields#types">JesusFreke's dalvik bytecode's wiki</a>
