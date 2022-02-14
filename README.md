@@ -7,7 +7,7 @@ This repo is for the starters in reverse engineering who keeps wondering about e
 #### It's my promise after reading this fully you're never going to face any problem's in reverse engineering
 
 # Why this repo?
-The starter's always keeps wondering and asking older reverser's about how to recognise right place in smali, how to dig, where to change blah blah and when no-one replies/respond to you = "It hurts very much deep inside" and this is what I faced so I don't want anyone more to face same and that's the reason also why i replies to every people and help everyone without anything in demand ( I know I did some my hails 😜)
+The starter's always keeps wondering and asking older reverser's about how to recognise right place in smali, how to dig, where to change blah blah and when no-one replies/respond to you = "It hurts very much deep inside" and this is what I faced so I don't want anyone more to face same and that's the reason also why i replies to every people and help everyone without anything in demand ( I know I did some my hails 😜) but we have to remember that too is older reverser's have their real life too
 
 And in this full articlee/repo i'll tell every word simple no complexity so that you can understand it.
 
