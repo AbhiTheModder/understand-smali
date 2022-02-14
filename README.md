@@ -75,4 +75,4 @@ Now let's understand it :
    - the next line making method which is like our nerves which transfers the data to our brain that what's inside it and that's the thing which the user want's to perform then the brain does the work according to it similarly /method contains the code hich the user wants to perform 
    - the public word after .method is like the open-source program's that we can overwrite if there was private word then we need to modify it like we get premium apps/software's illegally 
    - the next line after pyblic calling string function means that we want to display some strings to user's 
-   - tthe )V which we seeing is used to return tyoes in smali for understanding types in smali you can go to <a href="https://github.com/JesusFreke/smali/wiki/TypesMethodsAndFields#types">JesusFreke's dalvik bytecode's wiki</a>
+   - tthe )V which we seeing is used to return types in smali for understanding types in smali you can go to <a href="https://github.com/AbhiTheModder/understand-smali/wiki">This repo wiki page</a>
