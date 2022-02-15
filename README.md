@@ -11,6 +11,7 @@ This repo is for the starters in reverse engineering who keeps wondering about e
 <a href="https://t.me/Mods_byAbhi_demandbot"><img title="Telegram Bot" src="https://img.shields.io/badge/Telegram-bot-black?style=for-the-badge&logo=Telegram_bot"></a>
 
 <a href="https://telegra.ph/Introduction-to-Smali-06-29"> OUR LOVELY RESPECTED Prof. euzada has also written brief introduction to smali</a> 
+   
 <a href="https://github.com/AbhiTheModder/understand-smali/blob/main/Introduction%20to%20smali%20by%20euzada%20part%202.md"> Introduction to smali part 2 by Prof. euzada</a>
 
 #### It's my promise after reading this fully you're never going to face any problem's in reverse engineering
