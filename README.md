@@ -10,14 +10,14 @@ This repo is for the starters in reverse engineering who keeps wondering about e
 <a href="https://t.me/joinchat/xP-wW-A5mIBmMjY1"><img title="Telegram" src="https://img.shields.io/badge/Telegram-black?style=for-the-badge&logo=Telegram"></a>
 <a href="https://t.me/Mods_byAbhi_demandbot"><img title="Telegram Bot" src="https://img.shields.io/badge/Telegram-bot-black?style=for-the-badge&logo=Telegram_bot"></a>
 
-<a href="https://telegra.ph/Introduction-to-Smali-06-29"> OUR LOVELY RESPECTED Prof. euzada has also written brief introduction to smali</a> 
+### <a href="https://telegra.ph/Introduction-to-Smali-06-29"> OUR LOVELY RESPECTED Prof. euzada has also written brief introduction to smali</a> 
    
-<a href="https://github.com/AbhiTheModder/understand-smali/blob/main/Introduction%20to%20smali%20by%20euzada%20part%202.md"> Introduction to smali part 2 by Prof. euzada</a>
+### <a href="https://github.com/AbhiTheModder/understand-smali/blob/main/Introduction%20to%20smali%20by%20euzada%20part%202.md"> Introduction to smali part 2 by Prof. euzada</a>
 
 #### It's my promise after reading this fully you're never going to face any problem's in reverse engineering
 
 # Why this repo?
-The starter's always keeps wondering and asking older reverser's about how to recognise right place in smali, how to dig, where to change blah blah and when no-one replies/respond to you = "It hurts very much deep inside" and this is what I faced so I don't want anyone more to face same and that's the reason also why i replies to every people and help everyone without anything in demand ( I know I did some my hails 😜) but we have to remember that too is older reverser's have their real life too
+The starter's always keeps wondering and asking older reverser's about how to recognise right place in smali, how to dig, where to change blah blah and when no-one replies/respond to you = "It hurts very much deep inside" and this is what I faced so I don't want anyone more to face same and that's the reason also why i replies to every people and help everyone without anything in demand ( I know I did some my hails 😜) but we have to remember that older reverser's have their real life too
 
 And in this full articlee/repo i'll tell every word simple no complexity so that you can understand it.
 
