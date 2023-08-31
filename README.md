@@ -10,9 +10,13 @@ This repo is for the starters in reverse engineering who keeps wondering about e
 <a href="https://t.me/joinchat/xP-wW-A5mIBmMjY1"><img title="Telegram" src="https://img.shields.io/badge/Telegram-black?style=for-the-badge&logo=Telegram"></a>
 <a href="https://t.me/Mods_byAbhi_demandbot"><img title="Telegram Bot" src="https://img.shields.io/badge/Telegram-bot-black?style=for-the-badge&logo=Telegram_bot"></a>
 
-### <a href="https://telegra.ph/Introduction-to-Smali-06-29"> OUR LOVELY RESPECTED Prof. euzada has also written brief introduction to smali</a> 
-   
-### <a href="https://github.com/AbhiTheModder/understand-smali/blob/main/Introduction%20to%20smali%20by%20euzada%20part%202.md"> Introduction to smali part 2 by Prof. euzada</a>
+## Some Other references:
+
+<b> ~ The <code>smali-opcodes</code> folder contains full list of opcodes in smali you can download it and keep for your future references. </b>
+
+<b>~ The <code>smali-helper</code> folder contains Smali-Helper app created by <i>Anant Kumar Vivek</i> It is still in its beta phase so some references weren't added inside app </b>
+
+<b>~OUR LOVELY RESPECTED Prof. euzada has also written brief introduction to smali <a href="https://telegra.ph/Introduction-to-Smali-06-29"> Part 01 </a> | <a href="https://github.com/AbhiTheModder/understand-smali/blob/main/Introduction%20to%20smali%20by%20euzada%20part%202.md"> Part 02</a></b>
 
 #### It's my promise after reading this fully you're never going to face any problem's in reverse engineering
 
