@@ -1,5 +1,3 @@
-# [Disclaimer](https://github.com/AbhiTheModder/understand-smali/wiki/Disclaimer)
-
 As I mentioned I'll be adding the pictures of any queries users ask me to the next day wiki, so here it is,
 <img src="https://user-images.githubusercontent.com/85984486/154830448-6394f8d7-09ab-4a99-8583-866478f3eb12.png" width=500>
 
@@ -7,17 +5,11 @@ As I mentioned I'll be adding the pictures of any queries users ask me to the ne
 
 Let's take an app : 
 I've taken [Benime Whiteboard Video Maker](https://apkpure.com/benime-whiteboard-video-maker/com.benzveen.doodlify)
-Video and methods credits: <a href="https://t.me/Mr_Craazy">✘𝙰𝚂✘ ༄ᶬʳ᭄✿CʀaazƳ࿐</a>
+Video and methods credits: ✘𝙰𝚂✘ ༄ᶬʳ᭄✿CʀaazƳ࿐
 You can watch his full video from <a href="https://t.me/ApkEditorPr00/958">here</a>
 
 * When you'll download the app from apkpure or any website you'll see it's in an extensions .apks or .zip or .xapk formats simply these are as a archive or bundle format to make size of output less. To convert them we need to convert it into .apk format for which we use **Antisplit-G2 or SAI**
-       
-Here used ANtiSplit:(**Click on the image to watch the video**)
-<p align="center"
 
-[![Watch the video](https://user-images.githubusercontent.com/85984486/220583032-0e53cc62-10da-45ac-abc7-e4876bdcef2f.png)](https://user-images.githubusercontent.com/85984486/220582158-450e51f9-1523-4232-b243-5270bd3eec35.mp4)
-
-</p>
 
 ### After converting to apk now we are about start our work 😜:
 
@@ -82,5 +74,9 @@ then we'll return the value as return-void because register v0 value is being st
 
 * Now let's move on and it's similar ( as there is also same codes just we need to remove the if-eqz code which I discussed earlier about )to above process so I'll be skipping explanation still if anyone of you doesn't understand below processes then as always I say you're free to ask to me at <a href="https://t.me/Qbtaumai">@Qbtaumai</a> 😉:
 
-<img src="https://user-images.githubusercontent.com/85984486/220600212-528ea9f9-dfad-418f-b9f2-56827c16a7f3.png" width=300> <img src="https://user-images.githubusercontent.com/85984486/220600242-afafefba-62b6-452c-a585-b15aff8fcba0.png" width=300> <img src="https://user-images.githubusercontent.com/85984486/220600251-7866c615-e284-4160-beac-95cf67c074e9.png" width=300> <img src="https://user-images.githubusercontent.com/85984486/220601199-fc62e6b6-1033-4a71-a128-2dd6a863c73c.png" width=300> <img src="https://user-images.githubusercontent.com/85984486/220601231-67da3aea-1947-4cb1-a8a8-286fe995c74c.png" width=300>
+<img src="https://user-images.githubusercontent.com/85984486/220600212-528ea9f9-dfad-418f-b9f2-56827c16a7f3.png" width=300> <img src="https://user-images.githubusercontent.com/85984486/220600242-afafefba-62b6-452c-a585-b15aff8fcba0.png" width=300> <img src="https://user-images.githubusercontent.com/85984486/220600251-7866c615-e284-4160-beac-95cf67c074e9.png" width=300> <img src="https://user-images.githubusercontent.com/85984486/220601199-fc62e6b6-1033-4a71-a128-2dd6a863c73c.png" width=300> <img src="https://user-images.githubusercontent.com/85984486/220601231-67da3aea-1947-4cb1-a8a8-286fe995c74c.png" width=500>
 
+**```All the apps used in this journey are intended for educational purposes only and their methods are taken from internet, they doesn't belong to me I've no motto to teach how to crack this/that software further.```**
+
+## **Written with ❤ by Abhi**
+**_Kindly message me in telegram if you've any problem's in understanding anything_**
