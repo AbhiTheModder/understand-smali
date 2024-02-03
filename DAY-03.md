@@ -3,10 +3,8 @@ _**Yesterday I got a question from one off the reader and as told I'll put those
 ### The question and answer
 ![image](https://user-images.githubusercontent.com/85984486/154293034-ca952c95-b81a-432d-a38e-13cda00ee490.png)
 
-# Dex Basic Judgement Language by our legend @Spicey_01 who also have did hard works on smali understanding and like me putted all the resources he got from internet in explanatory language so all credits to him
-#### Go spam his DM/PMIB by Thanks😂(No don't do this but atleast add one Thanks message in his DM/PM/IB)
-## And I modifying some if his lines which seems hard to understand by newbies to common language only 😁😁
-### Written by @Spicey_01 & beautified,assets added & explained some hard words by Abhi
+**Dex Basic Judgement Language by our legend @Spicey_01 who also have did hard works on smali understanding and like me putted all the resources he got from internet in explanatory language so all credits to him.Go spam his DM/PMIB by Thanks😂(No don't do this but atleast add one Thanks message in his DM/PM/IB), And I'm modifying some if his lines which seems hard to understand by newbies to common language only 😁😁**
+
 
 ![image](https://user-images.githubusercontent.com/85984486/154318743-8878c46c-79b9-4bcb-ae09-1240f428a802.png)
 
@@ -43,7 +41,7 @@ _**Yesterday I got a question from one off the reader and as told I'll put those
 
  `invoke-static` => Invoke a static function (Go google it because there are lot resources and useful and I can't add all them here)
 
- ### Conditional jump branch:
+### Conditional jump branch:
 
 **NOTE: There can be anything thing like a,ab,02,0a,0b in places of `**` which is being used in below lines in smali**
 
@@ -112,7 +110,7 @@ _**Yesterday I got a question from one off the reader and as told I'll put those
        goto :goto_0
     .end method
 
- **Text description**: _If the if branch is met, the program will go down and finally return; and if the condition is not met, it will go to the :cond_0 branch, and finally execute goto :goto_0 to go back :goto_0 to return_
+**Text description**: _If the if branch is met, the program will go down and finally return; and if the condition is not met, it will go to the :cond_0 branch, and finally execute goto :goto_0 to go back :goto_0 to return_
 
  ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝；
 
@@ -155,18 +153,15 @@ _**Yesterday I got a question from one off the reader and as told I'll put those
  ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝；  =====
  (After reading the following content, you will almost get started after reading through)
 
- # Basic knowledge:
+# Basic knowledge:
 
-![image](https://user-images.githubusercontent.com/85984486/154316644-5177e447-bc5d-467f-b288-82373734f887.png)
-
-
- ## APK, Dalvik bytecode and smali files
+**APK, Dalvik bytecode and smali files**
  ———————————————————————————————————————————————————  ———————————————————————————————————————————————————  —————————
 
 <a href="https://medium.com/androiddevnotes/the-internals-of-android-apk-build-process-article-5b68c385fb20"> The internals of Android APK build process — Article</a>
 
- ### APK file
- **Everyone should know that the APK file is actually a compressed package with MIME as ZIP. We can see the internal file structure by modifying the ZIP suffix. For example, after modifying the suffix, open the Crocodile Naughty APK with RAR and you can see (Google Play download  full version):**
+**APK file**
+ - **Everyone should know that the APK file is actually a compressed package with MIME as ZIP. We can see the internal file structure by modifying the ZIP suffix. For example, after modifying the suffix, open the Crocodile Naughty APK with RAR and you can see (Google Play download  full version):**
  
 **_Suppose The app is My Water.apk and you modifies it to My Water.zip_**
      Where's My Water.zip\
@@ -186,7 +181,7 @@ _**Yesterday I got a question from one off the reader and as told I'll put those
        
 ![image](https://user-images.githubusercontent.com/85984486/154316834-a3157dab-3ede-4b52-a7e6-cf33691856be.png)
 
-#### Unimportant note: the difference between asset and res resource directories is:
+#### Unimportant note: the difference between asset and res resource directories:
 
 1. The resource file in the res directory will automatically generate an index file (R.java) when compiling, which is referenced by R.xxx.yyy in the Java code; and the resource file in the asset directory does not need to generate an index, in the Java code  Need to use AssetManager to access;
 
@@ -195,7 +190,7 @@ _**Yesterday I got a question from one off the reader and as told I'll put those
  Because Where's My Water is developed using Disney's own DMO game engine, all resource files used in the game are stored under assets, except for the application icons, which still need to be placed under res.
        
        
- # Dalvik bytecode:
+**Dalvik bytecode:**
  —————————————————————————————————————————————
   * Dalvik is a virtual machine specially designed by google for the Android operating system, which is deeply optimized.
   *Although programs on Android are developed using java, Dalvik and the standard java virtual machine JVM are two different things.
@@ -207,15 +202,15 @@ _**Yesterday I got a question from one off the reader and as told I'll put those
          However, it should be noted that in the end, the file we need to operate to modify the APK is the .smali file, not the exported Java file to recompile (and this is basically impossible).
        
        
- # smali file
+**`smali` file**
 
 Well, after having a certain understanding of Dalvik, let's introduce the key points: smali, and its syntax.
 
   Simply put, smali is the core code executed inside the Dalvik VM.  It has its own set of syntax, which will be introduced below. If you have experience in JNI development, you can quickly understand it.
 
-** First, the data type of smali**
+**First, the data type of smali**
 
-#### In smali, the data types are the same as in Android, but the corresponding symbols are changed:
+**In smali, the data types are the same as in Android, but the corresponding symbols are changed:**
 
          B---byte
          C---char
@@ -229,7 +224,7 @@ Well, after having a certain understanding of Dalvik, let's introduce the key po
          [XXX---array
          Lxxx/yyy---object
    
-#### The last two items are parsed here. The representation of the array is:
+**The last two items are parsed here. The representation of the array is:**
   Add the square brackets "[" before the basic type. For example, the int array and the float array are represented as: [I, [F; the representation of the object starts with L, and the format is LpackageName/objectName;
   (Note that there must be a semicolon at the end), for example, the String object in smali is:
          Ljava/lang/String;, where java/lang corresponds to the java.lang package, and String is an object defined in the package.
@@ -237,7 +232,7 @@ Well, after having a certain understanding of Dalvik, let's introduce the key po
 _**Some people may ask, since the class is represented by LpackageName/objectName;, how can the inner class in the class be referenced in smali?**_
    The answer is: LpackageName/objectName$subObjectName;.  That is, add the "$" sign before the inner class. More rules about the "$" sign will be discussed later.
        
- ### Second, the definition of the function
+****Second, the definition of the function****
 
  —————————————————————————————————————————————
 
@@ -259,7 +254,7 @@ Note that there are no separators between parameters, and it is easy to understa
 
          See that this is String foo (boolean, int[], int[], String, long) ?
                
- ### A specific introduction to the content of the smali file
+### A specific introduction to the content of the smali file
 
  —————————————————————————————————————————————
 
@@ -357,7 +352,7 @@ Note that there are no separators between parameters, and it is easy to understa
 
 _**It's normal to be confused.  Now I'll break it down one by one, understanding the meaning of these symbols will make you more effective when injecting code later.**_
        
- # Inheritance, interface and package information in smali
+# Inheritance, interface and package information in smali
 
  —————————————————————————————————————————————
 
@@ -486,7 +481,7 @@ The format is: .field public/private [static] [final] varName:<type>.
 
  —————————————————————————————————————————————
 
- **Functions in smali, like member variables, are also divided into two types**.
+**Functions in smali, like member variables, are also divided into two types**.
    But the difference between **static and instance in different member variables is the difference between direct and virtual**.
      So, what is the _**difference between direct method and virtual method?**_
 _To put it bluntly, a direct method is a private function, and the rest of the public and protected functions belong to a virtual method._
@@ -516,4 +511,5 @@ Here GlobalPurchaseHandler getGlobalIapHandler() is a private function defined i
    If you use invoke-virtual or invoke-static incorrectly when modifying smali, a common VerifyError will be raised when the compiled program is run.
 
 
-## Thanks to Spicy. sir because The things which are told in this day article are too much and I 've been used 3-4 more day's to explain them but as he has already these in stock so he provided So go and give a Thanks message to him ❤❤
+## **Written with ❤ by Abhi**
+**_Kindly message me in telegram if you've any problem's in understanding anything_**
