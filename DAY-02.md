@@ -5,13 +5,13 @@
 
 <p align="center">
 <a href="https://t.me/joinchat/xP-wW-A5mIBmMjY1"><img title="Telegram" src="https://img.shields.io/badge/Telegram-black?style=for-the-badge&logo=Telegram"></a>
-<a href="https://t.me/Mods_byAbhi_demandbot"><img title="Telegram Bot" src="https://img.shields.io/badge/Telegram-bot-black?style=for-the-badge&logo=Telegram_bot"></a>
+<a href="https://t.me/Mods_byAbhi_demandbot"><img title="Telegram Bot" src="https://img.shields.io/badge/Telegram-bot-black?style=for-the-badge&logo=Telegram_bot"></a></p>
 
 ### continuing Day 01
 
 _So I left somethings on DAY 01 because I want you to not get forget the things and that's why left in middle so when I start from left part you need to recall previous ones_ 
 
-# NOTE: I inform you first hand that I'll talk about smali and will let you know smali only for the things what it does kindly refer to a Java tutorial on internet.
+**NOTE:** _I inform you first hand that I'll talk about smali and will let you know smali only for the things what it does kindly refer to a Java tutorial on internet._
 
 ## So yesterday we left on what is )v there?
     - To understand it first see the image below:
@@ -31,8 +31,8 @@ _It denotes that a method does not have a return type._ **But this is also a poi
 
       ![image](https://user-images.githubusercontent.com/85984486/154001045-aaf56369-fc0f-4157-a18f-3991e90ddc85.png) 
 
-### Now I know you're wondering about what is return which we're talking all the way during understanding void and also in DAY 01 smali example
-## So, What is return?
+**Now I know you're wondering about what is return which we're talking all the way during understanding void and also in DAY 01 smali example**
+## So, What is `return`?
    - In Java, return is a reserved keyword i.e., we can’t use it as an identifier. It is used to exit from a method, with or without a value.
    - So this means the code returns the value which return keyword returns
    - So from now on you'll have to remember that whenever changing Booleans in methods where there is less checks you should consider editing 0x1 to those parameters which are being returned 
@@ -64,9 +64,10 @@ _It denotes that a method does not have a return type._ **But this is also a poi
    - registers are defined just after .method line
    * It does a simple work it tells the code that how many registers in the code are going to be used
    * Its alternative is _.locals_ which specifies the **non-parameters** in the code
-   * Now go and read <a href="https://github.com/JesusFreke/smali/wiki/Registers"> This wiki</a> two-three-four as many times until you not understand it if still cant able then message at <a href="https://t.me/ReverseEngineerin0">Telegram group</a> I'll see where you're facing the issue then I'll reply you and next day I'll mention that in wiki so other's not face same issue😀
+   * Now go and read <a href="https://github.com/JesusFreke/smali/wiki/Registers"> This wiki</a> two-three-four as many times until you not understand it if still cant able then message at <a href="https://t.me/ReverseEngineering0">Telegram group</a> I'll see where you're facing the issue then I'll reply you and next day I'll mention that in wiki so other's not face same issue😀
+   * As per users requests i started to explain it further from DAY 5 so have rad them too :)
 
-# Now I've told every basic thing, for further understanding you should consider reading the smali grammar table don't learn the table each time you modify the app for understanding read the table by every time reding you'll yourself don't worry so much take small steps you'll find table below😊😊
+**Now I've told every basic thing, for further understanding you should consider reading the smali grammar table don't learn the table each time you modify the app for understanding read the table by every time reding you'll yourself don't worry so much take small steps you'll find table below😊😊**
 [Smali - Table Of Java Opcode's.pdf](https://github.com/AbhiTheModder/understand-smali/files/8066835/Smali.-.Table.Of.Java.Opcode.s.pdf)
 
 **Now let's take a simple app to understand editing procedure**
@@ -140,5 +141,3 @@ and Boolean can store only either 0 or 1 so we can simply use const/4 and p0 use
 And after compiling result is:
 ![image](https://user-images.githubusercontent.com/85984486/154032197-8dd17c91-23df-48d3-8b7c-b2c4db22aa8f.png)
 
-
-#### Now from next day's I'll show some real app example's and will give you exercises **_but remember until I'll not receive at least two exercise completion message I'll not proceed further_**
