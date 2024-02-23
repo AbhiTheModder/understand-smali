@@ -1,3 +1,3 @@
-### All the apps used in this journey are intended for educational purposes I've no motto to teach how to crack this/that software further if any developer saw his app in this journey, then he can consider adding better security than blaming me that I've shown the method to crack his app, or hire me 😜
+### All the apps used in this journey, are intended for educational purposes only. I've no intention to promote piracy of any softwares. Further, if any developer sees his app in this journey, then he/she should consider improving his/her app's security, rather than blaming me for his/her app's piracy, or hire me 😜 ###
 
 _**Thank you**_
