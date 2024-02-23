@@ -4,11 +4,11 @@
 
 
 **Let's talk about registers in more detail today**
-- In day 1 or I guess 2, I remember I talked about them but not in detail... why? Because at that time, my motive was to just let you all familiarize with simple structure of codes, and put up some confidence in all of you :)
+- In day 1 or I guess 2, I remember I talked about them but not in detail... Why? Because at that time, my motive was to just let you all familiarize with simple structure of codes, and put up some confidence in all of you :)
 - Now we're ready to move on, Yay!
 
 **For that I thought about why not walkthrough examples :)**
-**NOTE:** _You can refer to the building process [here](https://github.com/AbhiTheModder/understand-smali/blob/main/AndroidIDE.md) for knowing how to download, install, build apk in AndroidIDE from which I've generated apk for the explanations, no problems if you don't want and just want to start through smali explanation part_
+**NOTE:** _You can refer to the building process [here](https://github.com/AbhiTheModder/understand-smali/blob/main/AndroidIDE.md). For download process, install, build apk in AndroidIDE from which I've generated apk for the explanations. No problems, if you don't want and just want to start through smali explanation part ;)_
 
 ### So, Let's start :D
 Basically, there are two types of registers:
@@ -55,7 +55,7 @@ ME: Of course in MT you'll not face it, but maybe in some traditional tool or Ap
 |--------------|--------------|--------------|
 | ![annotely_image](https://github.com/AbhiTheModder/understand-smali/assets/85984486/36225df8-a59a-4e09-83b4-5bf45d14f02d) | ![annotely_image](https://github.com/AbhiTheModder/understand-smali/assets/85984486/45978748-214e-4c33-b278-b68213d06956) | ![image](https://github.com/AbhiTheModder/understand-smali/assets/85984486/78b608b1-c94f-46df-b14e-23c81ffb55b1) |
 
-OR MT could do this too sometimes:
+or MT could do this too sometimes:
 
 ![image](https://github.com/AbhiTheModder/understand-smali/assets/85984486/71ece454-e50d-49d2-826c-d0f29e8e95e8)
 
