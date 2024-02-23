@@ -1,5 +1,5 @@
 # understand-smali
-This repo is for the starters in reverse engineering who keeps wondering about everything inside smali.
+This repo is for the beginners in reverse engineering, who keep wondering about everything inside smali.
 
 <p align="center">
 <a href="https://github.com/AbhiTheModder"><img title="GitHub" src="https://img.shields.io/badge/Abhi-TheModder-brightgreen?style=for-the-badge&logo=github"></a>
@@ -14,16 +14,16 @@ This repo is for the starters in reverse engineering who keeps wondering about e
 
 <b> ~ The <code>smali-opcodes</code> folder contains full list of opcodes in smali you can download it and keep for your future references. </b>
 
-<b>~ The <code>smali-helper</code> folder contains Smali-Helper app created by <i>Anant Kumar Vivek</i> It is still in its beta phase so some references weren't added inside app </b>
+<b>~ The <code>smali-helper</code> folder contains Smali-Helper app created by <i>Anant Kumar Vivek</i> It is still in its beta phase, so some references weren't added inside app. </b>
 
 <b>~OUR LOVELY RESPECTED Prof. euzada has also written brief introduction to smali <a href="https://telegra.ph/Introduction-to-Smali-06-29"> Part 01 </a> | <a href="https://github.com/AbhiTheModder/understand-smali/blob/main/Introduction%20to%20smali%20by%20euzada%20part%202.md"> Part 02</a></b>
 
-#### It's my promise after reading this fully you're never going to face any problem's in reverse engineering
+#### It's my promise that, after reading this fully, you're never going to face any problems in reverse engineering
 
 # Why this repo?
-The starter's always keeps wondering and asking older reverser's about how to recognise right place in smali, how to dig, where to change blah blah and when no-one replies/respond to you = "It hurts very much deep inside" and this is what I faced so I don't want anyone more to face same and that's the reason also why i replies to every people and help everyone without anything in demand ( I know I did some my hails 😜) but we have to remember that older reverser's have their real life too
+The beginners always keep wondering and asking old reversers about how to recognize right place in smali, how to dig, where to change blah blah and when no-one replies/respond to you = "It hurts very much deep inside" and this is what I have faced, so I don't want anyone else to face same and that's the reason also why I reply to everybody and help everyone without anything in demand (I know I did some of my hails 😜) but we have to remember that older reversers have their real life too...
 
-And in this full articlee/repo i'll tell every word simple no complexity so that you can understand it.
+And in this full article/repo I'll tell every word in the most simple way so that you can understand it.
 
 # Smali vs Java
 ### The first question when apps were build in java why there is smali in apk/apks?
@@ -35,28 +35,28 @@ And in this full articlee/repo i'll tell every word simple no complexity so that
 #### and smali = important for OS and reverse engineer's 🤣
 
 # What is smali
-   - The assembly language used by the Android Dalvik Virtual Machine(if try to understand simply it's a compiler for java codes into smali); usually created by decompiling .DEX (Dalvik Executable) files(Bunch of java codes compiled and addded to archive but this archive is not .zip or .7z it's called .dex), which are the executables included in Android apps (.APK files); usually used for low-level inspection of an Android app's contents, or for modding/reverse engineering Android apps.
-   -  "Smali" stands for assembler in Icelandic. Iceland has a village named Dalvik from which the Dalvik Virtual machine was named. Similarly, "Baksmali" stands for disassembler. ( Copied from Google 😎)
-   -  For example, say you have Java code that does something like
+   - The assembly language used by the Android Dalvik Virtual Machine (if try to understand simply it's a compiler for java codes into smali); usually created by decompiling .DEX (Dalvik Executable) files (Bunch of java codes compiled and added to archive, but this archive is not .zip or .7z it's called .dex), which are the executables included in Android apps (.APK files); usually used for low-level inspection of an Android app's contents, or for modding/reverse engineering Android apps.
+   -  "Smali" stands for assembler in Icelandic. Iceland has a village named Dalvik from which the Dalvik Virtual machine was named. Similarly, "Baksmali" stands for disassembler. (Copied from Google 😎)
+   -  For example, say you have Java code that does something like:
 
           int x = 56
-       the dex code for the method will most likely contain the hexadecimal sequence
+       The dex code for the method will most likely contain the hexadecimal sequence
 
           13 00 38 00
-       in smali we see the codee like this:
+       In smali, we see the code like this:
            
           const/16 v0, 38 (Don't worry about const/16 or v0, I'll tell everything)
           
 ![image](https://i.stack.imgur.com/nEEK5.png)
 source Stackoverflow
 
-# What things it contain
-   - Everything in it are similar to Java from classes to a sinle function only representation of those things are changed nothing else
-   - I'll talk about each and every code don't worry
+# What things does it contain:
+   - Everything in it are similar to Java from classes to functions, only representation of those things are changed nothing else.
+   - I'll talk about each and every code, don't worry.
 
 
 ### Example
-   Since evrybody takes example of Hello World! in programmimg field i'm going o take also
+   Since everybody takes example of "Hello World!" in programming field, I'm also taking the same :D
    
    The code in Java :
                   
@@ -81,12 +81,13 @@ source Stackoverflow
 
     return-void
      .end method
+     
 Now let's understand it :
-   - In the Java code and smali the firstline you can understand yourself tat it making the class name the only difference is that in Java we can simply write class HelloWorld{your codes} but in smali for writing we have to pu capital "L" before class name.
-   - the next line in smali:
-        [Ljava.lang.Object; is the name for Object[].class  and .super doing function like calling/storing of it
+   - In the Java code and smali, the first line you can understand yourself, that it is initiating the class name. The only difference is that, in Java we can simply write class HelloWorld{your codes}, but in smali, for writing we have to put capital "L" before class name.
+   - The next line in smali:
+        [Ljava.lang.Object; is the name for Object[].class  and .super doing function like calling/storing of it.
 
-   - the next line making method which is like our nerves which transfers the data to our brain that what's inside it and that's the thing which the user want's to perform then the brain does the work according to it similarly /method contains the code hich the user wants to perform 
-   - the public word after .method is like the open-source program's that we can overwrite if there was private word then we need to modify it like we get premium apps/software's illegally 
-   - the next line after pyblic calling string function means that we want to display some strings to user's 
-   - tthe )V which we seeing is used to return types in smali for understanding types in smali you can go to <a href="https://github.com/AbhiTheModder/understand-smali/wiki">This repo wiki page</a>
+   - The next line is initiating method, which is like our nerves which transfers the data to our brain that what's inside it and that's the thing which the user want's to perform. Then the brain does the work according to it. Similarly method contains the code which the user wants to perform. 
+   - The public word after `.method` is like the open-source programs that we can overwrite. If there was private word in the method initiation line, then we need to modify it, like we get premium apps/softwares illegally (Modding/Cracking).
+   - The next line after public calling string function, means that we want to display some strings to the user. 
+   - The `)V` which we're seeing is used to return types in smali. For understanding types in smali, you can go to <a href="https://github.com/AbhiTheModder/understand-smali/wiki">This repo wiki page</a>.
