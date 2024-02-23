@@ -1,9 +1,9 @@
-_**Yesterday I got a question from one off the reader and as told I'll put those here so that other's if have same problem can get benefitted**_
+_**Yesterday, I got a question from one of the reader, and as told, I'll put those here. So that if anyone else faces same problem, he/she can be benefitted**_
 
-### The question and answer
+### The Question and Answer:
 ![image](https://user-images.githubusercontent.com/85984486/154293034-ca952c95-b81a-432d-a38e-13cda00ee490.png)
 
-**Dex Basic Judgement Language by our legend @Spicey_01 who also have did hard works on smali understanding and like me putted all the resources he got from internet in explanatory language so all credits to him.Go spam his DM/PMIB by Thanks😂(No don't do this but atleast add one Thanks message in his DM/PM/IB), And I'm modifying some if his lines which seems hard to understand by newbies to common language only 😁😁**
+**Dex Basic Judgement Language by our legend @Spicey_01, who also did hard work on smali understanding, and like me, compiled all the resources he got from internet, in explanatory language. So, all credits to him. Go spam his DM/PM/IB by Thanks😂 (No, don't do this, but atleast add one Thanks message in his DM/PM/IB), and I'm modifying some of his lines, which might be difficult to understand by newbies, to simple language only 😁😁**
 
 
 ![image](https://user-images.githubusercontent.com/85984486/154318743-8878c46c-79b9-4bcb-ae09-1240f428a802.png)
@@ -17,14 +17,14 @@ _**Yesterday I got a question from one off the reader and as told I'll put those
 
  `.prologue` => method start
 
- `.line 12` => This method is on line 12, likely you can see same like .line 2 or .line 3 or 4 but the meaning is same that the method is at that line in the file/code see image below:
+ `.line 12` => This method is on line 12, likely you can see same like `.line 2` or `.line 3` or 4, but the meaning is same, that the method is at that speicifc line, in the file/code. See image below:
 
 ![image](https://user-images.githubusercontent.com/85984486/154317164-c1e2a7e3-7593-4bc7-8b87-a766f77745a2.png)
 
 
  `invoke-super` => Invoke the parent function => mean
 
-![image](https://user-images.githubusercontent.com/85984486/154294512-bfca15fc-51ab-4943-a180-667ff2ac4b80.png) So call the parent function into the given function/code
+![image](https://user-images.githubusercontent.com/85984486/154294512-bfca15fc-51ab-4943-a180-667ff2ac4b80.png) So call the parent function into the given function/code...
 
 
  `const/high16 vO, 0x7fo3` => Assign value of 0x7fo3 to v0
@@ -35,45 +35,45 @@ _**Yesterday I got a question from one off the reader and as told I'll put those
 
  `.end method` => function ends
 
- `new-instance` => Create an instance (Same like creating a new by calling .method but when you need to call inside a method it used)
+ `new-instance` => Create an instance (Same like creating a new by calling `.method`, but when you need to call inside a method, it's used)
 
- `iput-object` => object assignment (it put the object which is being told to it)
+ `iput-object` => object assignment (it puts the object which is being told to it)
 
- `invoke-static` => Invoke a static function (Go google it because there are lot resources and useful and I can't add all them here)
+ `invoke-static` => Invoke a static function (Go google it, because there are lot of helpful resources, and I can't add all of them here)
 
 ### Conditional jump branch:
 
 **NOTE: There can be anything thing like a,ab,02,0a,0b in places of `**` which is being used in below lines in smali**
 
- "`if-eq vA,vB, :cond. **`" => If vA equals vB then jump to :cond_ **
+ "`if-eq vA,vB, :cond. **`" => If vA equals vB, then jump to :cond_ **
 
  "`if-ne vA,vB, :cond_ **`" => Jump to :cond_ ** if vA is not equal to vB
 
- "`if-lt vA,vB, :cond_ **`" => If vA is less than vB then jump to :cond_ **
+ "`if-lt vA,vB, :cond_ **`" => If vA is less than vB, then jump to :cond_ **
 
- "`if-ge vA,vB, :cond_ **`" => If vA is greater than or equal to vB then jump to :cond_ **
+ "`if-ge vA,vB, :cond_ **`" => If vA is greater than or equal to vB, then jump to :cond_ **
 
- "`if-gt vA,vB, :cond_ **`" => Jump to :cond_ ** if vA is greater than vB
+ "`if-gt vA,vB, :cond_ **`" => Jump to :cond_ **, if vA is greater than vB
 
  "`if-le vA,vB, :cond_ **`" => If vA is less than or equal to vB, jump to :cond_ **
 
- "`if-eqz vA, :cond_ **`" => If vA equals 0 then jump to :cond_ **
+ "`if-eqz vA, :cond_ **`" => If vA equals 0, then jump to :cond_ **
 
- "`if-nez vA, :cond. **`" => Jump to :cond. _** if vA is not equal to 0
+ "`if-nez vA, :cond. **`" => Jump to :cond. _**, if vA is not equal to 0
 
- "`if-ltz vA, :cond. **`" => If vA is less than 0 then jump to :cond_ **
+ "`if-ltz vA, :cond. **`" => If vA is less than 0, then jump to :cond_ **
 
- "`if-gez vA, :cond_ **`" => If vA is greater than or equal to 0 then jump to :cond. **
+ "`if-gez vA, :cond_ **`" => If vA is greater than or equal to 0, then jump to :cond. **
 
- "`if-gtz vA, :cond_ **`" => If vA is greater than 0 then jump to :cond_ **
+ "`if-gtz vA, :cond_ **`" => If vA is greater than 0, then jump to :cond_ **
 
  "`if-lez vA, :cond_ **`" => If vA is less than or equal to 0, jump to :cond_ _**
 
   ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝；
-### Some important conditions types/methods
+### Some important conditions types/methods:
 
   **The java code of the `if` function:**
-**NOTE: I'll not explain these lines below why? => because in day one I've told how to analyze java vs smali read one by one and try to understand yourself if not understood then message me feel free I'll explain**
+**NOTE: I'll not explain these lines below. Why? => because in day 1, I've told you, how to analyze java vs smali. Read one by one and try to understand yourself. If not understood, then feel free to message me, I'll explain.**
 
        private boolean ifSense(){
            boolean tempFlag = ((3-2)==1)? true : false;
@@ -181,7 +181,7 @@ _**Yesterday I got a question from one off the reader and as told I'll put those
        
 ![image](https://user-images.githubusercontent.com/85984486/154316834-a3157dab-3ede-4b52-a7e6-cf33691856be.png)
 
-#### Unimportant note: the difference between asset and res resource directories:
+#### Unimportant Note: The difference between asset and res resource directories:
 
 1. The resource file in the res directory will automatically generate an index file (R.java) when compiling, which is referenced by R.xxx.yyy in the Java code; and the resource file in the asset directory does not need to generate an index, in the Java code  Need to use AssetManager to access;
 
@@ -259,7 +259,7 @@ Note that there are no separators between parameters, and it is easy to understa
  —————————————————————————————————————————————
 
  Let's start to further analyze the specific examples in smali,
-   - Take WMWActivity.smali in Crocodile Naughty(it's a app name) for analysis (for how to obtain it, please refer to APK Decompilation 2 in the next section: Tool Introduction, temporarily introduce the smali syntax),
+   - Take WMWActivity.smali in Crocodile Naughty (it's a app name) for analysis (for how to obtain it, please refer to APK Decompilation 2 in the next section: Tool Introduction, temporarily introduce the smali syntax),
  Its content is roughly like this:
        
          .class public Lcom/disney/WMW/WMWActivity;
@@ -455,7 +455,7 @@ The format is: .field public/private [static] [final] varName:<type>.
        
  sget-object is used to get the variable value and save it to the register of the next parameter,
  Here, get the String member variable PREFS_INSTALLATION_ID that appears above and put it in the v0 register,
-    Note: The type of the class to which the variable belongs is required in the front, followed by a colon and the type of the member variable, and "->" in the middle indicates the ownership.
+    Note: The type of the class to which the variable belongs, is required in the front, followed by a colon and the type of the member variable, and "->" in the middle indicates the ownership.
        
 (2) The instruction to obtain instance fields is basically the same as that of static fields, but because it is not a static variable, it cannot only indicate the type of the class where the variable is located, but also needs an instance of the class where the variable is located.  See example:
                        
@@ -507,7 +507,7 @@ _To put it bluntly, a direct method is a private function, and the rest of the p
                          invoke-direct {p0}, Lcom/disney/WMW/WMWActivity;->getGlobalIapHandler()Lcom/disney/config/GlobalPurchaseHandler;
        
        
-Here GlobalPurchaseHandler getGlobalIapHandler() is a private function defined in WMWActivity,
+Here GlobalPurchaseHandler getGlobalIapHandler() is a private function defined in WMWActivity.
    If you use invoke-virtual or invoke-static incorrectly when modifying smali, a common VerifyError will be raised when the compiled program is run.
 
 
