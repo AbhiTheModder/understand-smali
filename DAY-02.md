@@ -26,7 +26,7 @@ _It denotes that a method does not have a return type._ **But this is also a poi
 
   - **Now VOID are of two types one is _void type_ and another is _void keyword_
   - The first line which I talked about is _void keyword_ 
-  - The _void type works like an end method. Just like we say that `.method` is codes(in Smali a method directive) starting parent notation, the `.end` method is it's ending,  similarly, void type represents the void return type as a class and contain a Class<Void> public value which you've seen.
+  - The _void type works like an end method. Just like we say that `.method` is code (in Smali a method directive) starting parent notation, the `.end method` is it's ending,  similarly, void type represents the void return type as a class and contain a Class<Void> public value which you've seen.
   - Therefore, the only value we can assign to a Void variable is null.
 
 
@@ -52,7 +52,7 @@ _It denotes that a method does not have a return type._ **But this is also a poi
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     return-void
-     `.end` method
+     `.end method`
 
    - Here, you can see that void is returning, means the registers used here is being returned. So if we want to disable it, we can add `const/4 v0, 0x0` before return method, and the return method will do its function.
    - This is a point to note that, I take this code just as an example. Maybe if you modify the hello world in this example, then it won't work or crashes. I just took it as an example to tell what it actually does.
