@@ -9,7 +9,7 @@
 
 ### Continuing Day 01
 
-_So I left some things on DAY 01 because I don't you to forget the things and that's why left in middle so when I start from left part you need to recall previous ones_ 
+_So I left some things on DAY 01 because I don't want you to forget the things and that's why I left in middle ,so when I start from the left out part, you need to recall previous ones_ 
 
 **NOTE:** _I inform you first hand that I'll talk about smali and will let you know smali only, for the things what it does. Kindly refer to a Java tutorial on internet._
 
@@ -26,8 +26,9 @@ _It denotes that a method does not have a return type._ **But this is also a poi
 
   - **Now VOID are of two types one is _void type_ and another is _void keyword_
   - The first line which I talked about is _void keyword_ 
-  - The _void type works like an end method. As we say that method is codes starting parent and .end method is it's ending, the same way, void type represent the void return type as a class and contain a Class<Void> public value which you've seen.
+  - The _void type works like an end method. Just like we say that .method is codes(in Smali a method directive) starting parent notation, the .end method is it's ending,  similarly, void type represents the void return type as a class and contain a Class<Void> public value which you've seen.
   - Therefore, the only value we can assign to a Void variable is null.
+
 
       ![image](https://user-images.githubusercontent.com/85984486/154001045-aaf56369-fc0f-4157-a18f-3991e90ddc85.png) 
 
@@ -58,7 +59,7 @@ _It denotes that a method does not have a return type._ **But this is also a poi
 
 ### _Now let's talk about these v0,v1,v2,v3,v4,p0,p1,p2 blah blah_
       These are called Registers names
-    So, first talk about registers
+    So, let's first talk about registers...
 
 ## Registers
    - Registers are defined just after .method line
@@ -67,7 +68,7 @@ _It denotes that a method does not have a return type._ **But this is also a poi
    * Now go and read <a href="https://github.com/JesusFreke/smali/wiki/Registers"> This wiki</a> two-three-four as many times, until you don't understand it. If you're still not able to, then message at <a href="https://t.me/ReverseEngineering0">Telegram group</a>, I'll see where you're facing the issue. Then I'll reply you and next day I'll mention that in wiki so others don't face the same issue in future 😀
    * As per user requests, I explained it further from DAY 5, so have a look on them too :)
 
-**Now I've told every basic thing, for further understanding you should consider reading the smali grammar table. Don't learn the table. Each time you're modifying any application, have a look on the table. Don't worry, gradually you'll learn it. You'll find table below 😊😊**
+**Now I've told every basic thing, for further understanding you should consider reading the smali grammar table. Don't learn the table. Each time you're modifying any application, have a look on the table. Don't worry, gradually you'll learn it. You can find the table below 😊😊**
 [Smali - Table Of Java Opcode's.pdf](https://github.com/AbhiTheModder/understand-smali/files/8066835/Smali.-.Table.Of.Java.Opcode.s.pdf)
 
 **Now let's take a simple app to understand editing procedure**
@@ -89,7 +90,7 @@ _It denotes that a method does not have a return type._ **But this is also a poi
 ![Screenshot 2022-02-15 135752](https://user-images.githubusercontent.com/85984486/154022556-1040d79a-071e-4a44-b2ed-673c9210a09f.png)
 The result is:
 ![image](https://user-images.githubusercontent.com/85984486/154022653-a8d6e30d-dc23-4c89-b9c6-9f8f0a63da92.png)
-_**But the resultss don't seem interesting to me, so I'll try to search for the words separately**_
+_**But the results don't seem interesting to me, so I'll try to search for the words separately**_
 So, I'll search now for just **remove** and results:
 ![Screenshot 2022-02-15 140307](https://user-images.githubusercontent.com/85984486/154023322-cbca00ca-b2e6-4309-a38b-9dea330e3597.png)
 and this result seems right to me, + interesting too, because it is completing the word "Remove Ads", which we tried to find first, but in an interesting way, so I'll go through it:
