@@ -26,7 +26,7 @@ _It denotes that a method does not have a return type._ **But this is also a poi
 
   - **Now VOID are of two types one is _void type_ and another is _void keyword_
   - The first line which I talked about is _void keyword_ 
-  - The _void type works like an end method. Just like we say that .method is codes(in Smali a method directive) starting parent notation, the .end method is it's ending,  similarly, void type represents the void return type as a class and contain a Class<Void> public value which you've seen.
+  - The _void type works like an end method. Just like we say that `.method` is codes(in Smali a method directive) starting parent notation, the `.end` method is it's ending,  similarly, void type represents the void return type as a class and contain a Class<Void> public value which you've seen.
   - Therefore, the only value we can assign to a Void variable is null.
 
 
@@ -39,10 +39,10 @@ _It denotes that a method does not have a return type._ **But this is also a poi
    - So, from now on, you'll have to remember that whenever changing Booleans in methods where there is less checks, you should consider editing 0x1 to those parameters which are being returned. 
    - For example, let's see DAY 01 example:
 
-    .class public LHelloWorld;
-    .super Ljava/lang/Object;
+    `.class` public LHelloWorld;
+    `.super` Ljava/lang/Object;
 
-    .method public static main([Ljava/lang/String;)V
+    `.method` public static main([Ljava/lang/String;)V
     registers 2
 
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
@@ -52,7 +52,7 @@ _It denotes that a method does not have a return type._ **But this is also a poi
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     return-void
-     .end method
+     `.end` method
 
    - Here, you can see that void is returning, means the registers used here is being returned. So if we want to disable it, we can add `const/4 v0, 0x0` before return method, and the return method will do its function.
    - This is a point to note that, I take this code just as an example. Maybe if you modify the hello world in this example, then it won't work or crashes. I just took it as an example to tell what it actually does.
@@ -62,7 +62,7 @@ _It denotes that a method does not have a return type._ **But this is also a poi
     So, let's first talk about registers...
 
 ## Registers
-   - Registers are defined just after .method line
+   - Registers are defined just after `.method` line
    * It does a simple work. It tells the code that how many registers in the code are going to be used.
    * Its alternative is _.locals_ which specifies the **non-parameters** in the code.
    * Now go and read <a href="https://github.com/JesusFreke/smali/wiki/Registers"> This wiki</a> two-three-four as many times, until you don't understand it. If you're still not able to, then message at <a href="https://t.me/ReverseEngineering0">Telegram group</a>, I'll see where you're facing the issue. Then I'll reply you and next day I'll mention that in wiki so others don't face the same issue in future 😀
