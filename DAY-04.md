@@ -29,7 +29,7 @@ Well don't worry, I'm not going to do that :D
  * Reasons why **DoodleMainActivity** is being searched:
 1. As I mentioned, it's good if you have a little Java knowledge, even only creating the _hello world!_ app in Java, is enough for beginning the reverse engineering... Now, if you recall your memory a little bit, you'll remember that the first file during making of that `hello world!` project, we created a java file named as **MainActivity**, and in that file, we wrote everything and afterwards we built the application. When that application was opened, it showed us _hello world!_ text on Main Screen.
 2. Similarly, every app has it's MainActivity, which it opens first on launch of the application, and in this app (i.e. Benime), that activity is **DoodleMainActivity**.
-3. It's always recommended to first check the opening actvity of any app during reverse engineering of it for many reasons, such as, checking what is it doing on run, and sometimes devs leave their important stuffs here also, like in-app purchases details, which we guys need 😁
+3. It's always recommended to first check the opening actvity of any app during reverse engineering of it for many reasons, such as, checking what is it doing on run, and sometimes devs leave their important stuffs here also, like in-app purchases details, which we are in need of 😁
 4. So, I hope these reasons are enough for you to understand why **DoodleMainActivity** is being searched.
 
 * Open the first result which you get and just like in the below image click on `goto` it'll lead you guy's to the** DoodleMainActivity**
