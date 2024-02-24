@@ -3,7 +3,7 @@ _**Yesterday, I got a question from one of the reader, and as told, I'll put tho
 ### The Question and Answer:
 ![image](https://user-images.githubusercontent.com/85984486/154293034-ca952c95-b81a-432d-a38e-13cda00ee490.png)
 
-**Dex Basic Judgement Language by our legend @Spicey_01, who also did hard work on smali understanding, and like me, compiled all the resources he got from internet, in explanatory language. So, all credits to him. Go spam his DM/PM/IB by Thanks😂 (No, don't do this, but atleast add one Thanks message in his DM/PM/IB), and I'm modifying some of his lines, which might be difficult to understand by newbies, to simple language only 😁😁**
+**Dex Basic Judgement Language by @Spicey_01, who also did hard work on smali understanding, and like me, compiled all the resources he got from internet, in explanatory language. So, all credits for this page to him. Go spam his DM/PM/IB by Thanks😂 (No, don't do this, but atleast add one Thanks message in his DM/PM/IB), and I'm modifying some of his lines, which might be difficult to understand by newbies, to simple language only 😁😁**
 
 
 ![image](https://user-images.githubusercontent.com/85984486/154318743-8878c46c-79b9-4bcb-ae09-1240f428a802.png)
