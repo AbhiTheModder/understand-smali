@@ -55,7 +55,7 @@ ME: Of course in MT you'll not face it, but maybe in some traditional tool or Ap
 |--------------|--------------|--------------|
 | ![annotely_image](https://github.com/AbhiTheModder/understand-smali/assets/85984486/36225df8-a59a-4e09-83b4-5bf45d14f02d) | ![annotely_image](https://github.com/AbhiTheModder/understand-smali/assets/85984486/45978748-214e-4c33-b278-b68213d06956) | ![image](https://github.com/AbhiTheModder/understand-smali/assets/85984486/78b608b1-c94f-46df-b14e-23c81ffb55b1) |
 
-or MT could do this too sometimes:
+OR MT could do this too sometimes:
 
 ![image](https://github.com/AbhiTheModder/understand-smali/assets/85984486/71ece454-e50d-49d2-826c-d0f29e8e95e8)
 
