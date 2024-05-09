@@ -13,4 +13,4 @@ This repo is for the beginners in reverse engineering, who keep wondering about 
 Now go to <a href="https://github.com/AbhiTheModder/understand-smali/wiki">This repo wiki page</a>.
 
 # Notice
-Wikis are in the process of moving to [This Website](https:/smali.pages.dev), and as such if some pages are missing from this repo wiki it's most likely that they've been added to the website so please go there to read them. Thanks
+Wikis are in the process of moving to [This Website](https://smali.pages.dev), and as such if some pages are missing from this repo wiki it's most likely that they've been added to the website so please go there to read them. Thanks
