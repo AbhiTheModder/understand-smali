@@ -17,7 +17,8 @@
   <div class="content">
     <p><strong>NOTE:</strong> </p>
     <ul>
-    <li>As we&#39;ve already discussed a bit about param registers on Day 3 of local registers we&#39;ll be just continuing it with a more bite, yeah bite,cheese burger to it. Let&#39;s start lol. 😂</li>
+    <li><strong><code>non-static methods</code></strong>  are also called <strong><code>instance methods</code></strong>.</li>
+    <li>As we&#39;ve already discussed a bit about param registers on Day 3 of local registers we&#39;ll be just continuing it with a more bit, yeah cheese burger. Let&#39;s start lol. 😂</li>
     <li>Oh i forgot, it&#39;s WCC time so let&#39;s go with cricket as an example. </li>
     <li>This page has been my labor of love. I’ve wiped the slate clean, rewritten everything from scratch countless times, and scoured the internet for articles (you can find them at the bottom of this page) to get it just right. Fingers crossed that you enjoy it! 😊</li>
     </ul>
@@ -48,40 +49,22 @@
     <li><p><strong>Crucial Use Case and Benefits</strong>: The introduction of the <code>p</code> naming scheme for parameter registers was to address the inconvenience of renumbering registers when editing Smali code. If additional registers are needed, using the <code>p</code> naming scheme allows for easy adjustment of the total number of registers without renumbering existing ones. This simplifies code modifications and enhances readability by visually distinguishing between local and argument registers.</p>
     </li>
     </ul>
+    <p><strong>Handling values for registers</strong></p>
+    <p>
+      Well, by far at this point you would've understand some points, like:
+      <li id="regval">Registers can have any type value</li>
+      <li id="regval">Registers are always of 32-bits in dalvik-bytecode</li>
+      <strong>So, How does we handle values like Long(l) and Double(J) in Smali, as we know they have 64-bits, right?</strong>
+      <br> Yes, exactly what you're thinking right now, just by using <strong>two registers</strong> for the value.
+    </p>
+    <p>
+      There's a very good explanation both in text and video on this, you can find it here:
+      <br><li id="regvalexp"><a href="https://t.me/TDOhex_Discussion/21844">Video explanation</a></li>
+      <li id="regvalexp"><a href="https://t.me/TDOhex_Discussion/21971">Text explanation</a></li>
+      Make sure to focus on the part where Long value for DateTime is being manipulated in the video that's the main point.
+      <br><img src="https://te.legra.ph/file/555562113ab157dac645a.jpg" alt="QNA" width="90%">
+    </p>
   </div>
-  <details>
-    <summary>Some external references used for registers explanation</summary>
-    <div class="references">
-        <br>(1) android - How does the Dalvik VM save and restore its registers
-        <br><a href="https://stackoverflow.com/questions/8721628/how-does-the-dalvik-vm-save-and-restore-its-registers-between-method-calls">https://stackoverflow.com/questions/8721628/how-does-the-dalvik-vm-save-and-restore-its-registers-between-method-calls</a>
-        <br>(2) Dalvik virtual machine instruction set and architecture.
-        <br><a href="https://stackoverflow.com/questions/17916910/dalvik-virtual-machine-instruction-set-and-architecture">https://stackoverflow.com/questions/17916910/dalvik-virtual-machine-instruction-set-and-architecture</a>
-        <br>(3) Dalvik VM Instruction Formats - Vanderbilt University.
-        <br><a href="http://www.dre.vanderbilt.edu/~schmidt/android/android-4.0/dalvik/docs/instruction-formats.html">http://www.dre.vanderbilt.edu/~schmidt/android/android-4.0/dalvik/docs/instruction-formats.html</a>
-        <br>(4) Registers · JesusFreke/smali Wiki · GitHub.
-        <br><a href="https://github.com/JesusFreke/smali/wiki/Registers">https://github.com/JesusFreke/smali/wiki/Registers</a>
-        <br>(5) Can you help me understand this smali code?
-        <br><a href="https://www.reddit.com/r/androiddev/comments/8nmr9b/can_you_help_me_understand_this_smali_code/">https://www.reddit.com/r/androiddev/comments/8nmr9b/can_you_help_me_understand_this_smali_code/</a>
-        <br>(6) How do i set these tricky boolean values to true in Smali-Dalvik?. 
-        <br><a href="https://reverseengineering.stackexchange.com/questions/31754/how-do-i-set-these-tricky-boolean-values-to-true-in-smali-dalvik">https://reverseengineering.stackexchange.com/questions/31754/how-do-i-set-these-tricky-boolean-values-to-true-in-smali-dalvik</a>
-        <br>(7) Understanding the Dalvik bytecode with the Dedexer tool 
-        <br><a href="https://www.slideshare.net/slideshow/understanding-the-dalvik-bytecode-with-the-dedexer-tool/2634903">https://www.slideshare.net/slideshow/understanding-the-dalvik-bytecode-with-the-dedexer-tool/2634903</a>
-        <br>(8) SymDroid: Symbolic Execution for Dalvik Bytecode - Tufts University.
-        <br><a href="https://www.cs.tufts.edu/~jfoster/papers/cs-tr-5022.pdf">https://www.cs.tufts.edu/~jfoster/papers/cs-tr-5022.pdf</a>
-        <br>(9) Dalvik bytecode format | Android Open Source Project.
-        <br><a href="https://source.android.com/docs/core/runtime/dalvik-bytecode">https://source.android.com/docs/core/runtime/dalvik-bytecode</a>
-        <br>(10) Example Smali - androidcracking. 
-        <br><a href="http://androidcracking.blogspot.com/2010/09/examplesmali.html">http://androidcracking.blogspot.com/2010/09/examplesmali.html</a>
-        <br>(11) Dalvik Opcodes - pallergabor
-        <br><a href="http://pallergabor.uw.hu/androidblog/dalvik_opcodes.html">http://pallergabor.uw.hu/androidblog/dalvik_opcodes.html</a>
-        <br>(12) Why is this an invalid smali register?
-        <br><a href="https://www.exchangetuts.com/why-is-this-an-invalid-smali-register-1641296524602199">https://www.exchangetuts.com/why-is-this-an-invalid-smali-register-1641296524602199</a>
-        <br>(13) How does Dalvik handle &#39;this&#39; registers?
-        <br><a href="https://calebfenton.github.io/2016/02/21/how-does-dalvik-handle-this-registers">https://calebfenton.github.io/2016/02/21/how-does-dalvik-handle-this-registers</a>
-        <br>(14) Modifying smali file
-        <br><a href="https://stackoverflow.com/questions/12648196/modifying-smali-files">https://stackoverflow.com/questions/12648196/modifying-smali-files</a>
-    </div>
-  </details>
   <div
     data-chirpy-theme="system"
     data-chirpy-comment="true"
@@ -108,11 +91,29 @@
     text-align: left;
     word-wrap: break-word;
   }
-  .references {
+  #regval {
     text-align: left;
     font-size: smaller;
     padding: 5px;
     font-weight: 300;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  #regvalexp {
+    text-decoration: dotted underline;
+    list-style: square;
+    text-align: left;
+    font-size: smaller;
+    padding: 5px;
+    font-weight: 300;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
   }
   .Next {
     position: fixed;
