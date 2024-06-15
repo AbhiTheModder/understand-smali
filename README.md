@@ -1,16 +1,42 @@
-# understand-smali
-This repo is for the beginners in reverse engineering, who keep wondering about everything inside smali.
+# understand-smali 
+This repo is for beginners in reverse engineering (Android), who keep wondering about everything inside smali.
 
-<p align="center">
-<a href="https://github.com/AbhiTheModder"><img title="GitHub" src="https://img.shields.io/badge/Abhi-TheModder-brightgreen?style=for-the-badge&logo=github"></a>
-<a href="https://www.youtube.com/channel/UCtBILuQgvXHPfvOUdcmMS2Q"><img title="YouTube" src="https://img.shields.io/badge/YouTube-Abhi The MØÐÐĒR-red?style=for-the-badge&logo=Youtube"></a>
-</p>
 
-<p align="center">
-<a href="https://t.me/joinchat/xP-wW-A5mIBmMjY1"><img title="Telegram" src="https://img.shields.io/badge/Telegram-black?style=for-the-badge&logo=Telegram"></a>
-<a href="https://t.me/Mods_byAbhi_demandbot"><img title="Telegram Bot" src="https://img.shields.io/badge/Telegram-bot-black?style=for-the-badge&logo=Telegram_bot"></a>
+# Wiki
+> [!TIP]
+> repo wiki page: [https://smali.pages.dev](https://smali.pages.dev). 
 
-Now go to <a href="https://github.com/AbhiTheModder/understand-smali/wiki">This repo wiki page</a>.
 
-# Notice
-Wikis are in the process of moving to [This Website](https://smali.pages.dev), and as such if some pages are missing from this repo wiki it's most likely that they've been added to the website so please go there to read them. Thanks
+### 🐩 Contributions
+
+Contributions of any type are welcome as long as it helps improving the repo/site and better help towards understanding smali. Feel free to do pull-request's with your changes!
+
+**Working on your first Pull Request?** You can learn how from this _free_ series [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request)
+
+
+## 👨🏻‍💻 Support
+
+| Telegram Group | Contact Bot |
+|--------|--------|
+| [![](https://img.shields.io/badge/Telegram-black?style=for-the-badge&logo=Telegram "Telegram")](https://t.me/joinchat/xP-wW-A5mIBmMjY1) | [![](https://img.shields.io/badge/Telegram-bot-black?style=for-the-badge&logo=Telegram_bot "Telegram Bot")](https://t.me/QbtaumaiBot) |
+
+
+## 💖 Like my work?
+This project needs a ⭐ from you. Don't forget to leave a ⭐.  
+
+
+## Licence
+
+```plaintext
+                    GNU GENERAL PUBLIC LICENSE
+                        Version 3, 29 June 2007
+
+  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+  Everyone is permitted to copy and distribute verbatim copies
+  of this license document, but changing it is not allowed.
+
+                             Preamble
+
+   The GNU General Public License is a free, copyleft license for
+ software and other kinds of works.
+```
