@@ -38,6 +38,9 @@
   <div class="subheadgroup seven">
     <li class="li"><b>Smali CheatSheet</b>: <a href="https://gist.github.com/AndHager/6302d7cf759312fd1ac745839c351428">Click Here</a></li><br>
   </div>
+  <div class="subheadgroup eight">
+    <li class="liei"><b>Research Articles on smali</b>: <a href="https://github.com/AbhiTheModder/understand-smali/tree/main/Articles"><strong><code>../Articles</code></strong></a></li><br>
+  </div>
   <div
     data-chirpy-theme="system"
     data-chirpy-comment="true"
@@ -89,6 +92,9 @@
   .li {
     font-weight: 400;
   }
+  .liei {
+    font-weight: 700;
+  }
   .two {
     margin-top: 60px;
   }
@@ -107,8 +113,11 @@
   .seven {
     margin-top: 210px;
   }
-  #chirpy-comment {
+  .eight {
     margin-top: 240px;
+  }
+  #chirpy-comment {
+    margin-top: 270px;
   }
   .Next {
     position: fixed;
