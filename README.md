@@ -25,7 +25,7 @@ Contributions of any type are welcome as long as it helps improving the repo/sit
 This project needs a ⭐ from you. Don't forget to leave a ⭐.  
 
 
-## Licence
+## License
 
 ```plaintext
                     GNU GENERAL PUBLIC LICENSE
