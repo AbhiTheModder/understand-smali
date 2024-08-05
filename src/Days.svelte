@@ -8,6 +8,7 @@
     <li id="li"><a href="/2">Day 2 - Basics</a></li>
     <li id="li"><a href="/3">Day 3 - Registers</a></li>
     <li id="li"><a href="/4">Day 4 - Registers Conti...</a></li>
+    <li id="li"><a href="/5">Day 5 - Examples</a></li>
   <p class="home"> 
     <a href="/">
       <button>

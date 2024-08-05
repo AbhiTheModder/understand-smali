@@ -183,7 +183,7 @@
           <br>
           Also, always make a backup of your original smali files before making any modifications, so you can easily revert your changes if necessary.
           Though if you're MT Manager user it automatically creates a new file with <code>.bak</code> extension so you don't have to worry about it.
-          <br>But if you're using any other tool then you have to do it manually, also MT only creates backup file of youre previous state of modification, so if you want to keep a backup of your original file then you have to do it manually.
+          <br>But if you're using any other tool then you have to do it manually, also MT only creates backup file of your previous state of modification, so if you want to keep a backup of your original file then you have to do it manually.
           <br>
             <br>
             Finally, always follow the best practices for modding and respect the intellectual property of the original app developers.
