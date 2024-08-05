@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       // Include both HTML files in the build input
-      input: ['index.html', 'about.html', 'days.html', '1.html', '2.html', '3.html', '4.html']
+      input: ['index.html', 'about.html', 'days.html', '1.html', '2.html', '3.html', '4.html', '5.html']
     }
   }
 })

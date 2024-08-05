@@ -13,7 +13,7 @@
     bind:open
     --color="#646cff" /></div>
 
-  <Menu bind:open />
+  <Menu {open} />
   <div class="content">
     <h3 class="registers">REGISTERS</h3>
     <p><strong>In Smali, registers are used to store any type of data (such as int, float, boolean, objects, and arrays), except for double and long values, where each one requires two registers for 64 bits and then pass arguments to the method. There are two types of registers: <code>local</code> and <code>param(eter)</code> registers</strong></p>
@@ -102,7 +102,7 @@
   ></div>
 </main>
 
-<a class="Back" href="/">
+<a class="Back" href="/2">
   <button>
     ⇦
   </button>
@@ -120,6 +120,7 @@
   .content {
     text-align: left;
   }
+  
   .registers {
     /* font-size: small;
     padding: 5px; */
@@ -128,20 +129,23 @@
     text-align: center;
     /* margin-left: 100px; */
   }
+
   .Next {
-    position: fixed;
-    bottom: 0;
     right: 0;
-    margin-bottom:20px;
-    margin-right:20px;
+    margin-right: 20px;
   }
+
   .Back {
+    left: 0;
+    margin-left: 20px;
+  }
+
+  .Next, .Back {
     position: fixed;
     bottom: 0;
-    left: 0;
-    margin-bottom:20px;
-    margin-left:20px;
+    margin-bottom: 20px;
   }
+
   .hamburger {
     position: absolute;
     top:0;

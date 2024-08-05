@@ -13,7 +13,7 @@
     bind:open
     --color="#646cff" /></div>
 
-  <Menu bind:open />
+  <Menu {open} />
   <h1 class="title">Introduction!</h1>
   <p class="title sub">This wiki is for the beginners in reverse engineering, who keep wondering about everything inside smali.</p>
   <h2 class="title subhead">External Resources:</h2><br>
@@ -120,18 +120,19 @@
     margin-top: 270px;
   }
   .Next {
-    position: fixed;
-    bottom: 0;
     right: 0;
-    margin-bottom:20px;
-    margin-right:20px;
+    margin-right: 20px;
   }
+
   .Back {
+    left: 0;
+    margin-left: 20px;
+  }
+
+  .Next, .Back {
     position: fixed;
     bottom: 0;
-    left: 0;
-    margin-bottom:20px;
-    margin-left:20px;
+    margin-bottom: 20px;
   }
   .hamburger {
     position: absolute;

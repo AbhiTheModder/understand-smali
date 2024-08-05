@@ -12,7 +12,7 @@
     bind:open
     --color="#646cff" /></div>
 
-  <Menu bind:open />
+  <Menu {open} />
   <div class="content">
     <p>As I mentioned I&#39;ll be adding the pictures of any queries users ask me to the next day wiki, so here it is,</p>
     <img alt=" " src="https://user-images.githubusercontent.com/85984486/154830448-6394f8d7-09ab-4a99-8583-866478f3eb12.png" width=250>
@@ -106,7 +106,7 @@
   ></div>
 </main>
 
-<a class="Back" href="/">
+<a class="Back" href="/1">
   <button>
     ⇦
   </button>
@@ -124,20 +124,23 @@
   .content {
     text-align: left;
   }
+  
   .Next {
-    position: fixed;
-    bottom: 0;
     right: 0;
-    margin-bottom:20px;
-    margin-right:20px;
+    margin-right: 20px;
   }
+
   .Back {
+    left: 0;
+    margin-left: 20px;
+  }
+
+  .Next, .Back {
     position: fixed;
     bottom: 0;
-    left: 0;
-    margin-bottom:20px;
-    margin-left:20px;
+    margin-bottom: 20px;
   }
+
   .hamburger {
     position: absolute;
     top:0;

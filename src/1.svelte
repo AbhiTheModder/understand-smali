@@ -42,7 +42,7 @@
     bind:open
     --color="#646cff" /></div>
 
-  <Menu bind:open />
+  <Menu {open} />
 <div class="mainbody">
   <h1 id="h1">Smali vs Java</h1>
   <h4 id="h4">The First Question which may come to your mind is:</h4>
@@ -122,7 +122,7 @@
 ></div>
 </main>
 
-<a class="Back" href="/">
+<a class="Back" href="/about">
   <button>
     ⇦
   </button>
@@ -143,26 +143,31 @@
     padding: 5px;
     /* font-weight: 500; */
   }
+
   .pimp {
     font-weight: 100;
   }
+
   .mainbody {
     text-align: left;
   }
+
   .Next {
-    position: fixed;
-    bottom: 0;
     right: 0;
-    margin-bottom:20px;
-    margin-right:10px;
+    margin-right: 20px;
   }
+
   .Back {
+    left: 0;
+    margin-left: 20px;
+  }
+
+  .Next, .Back {
     position: fixed;
     bottom: 0;
-    left: 0;
-    margin-bottom:20px;
-    margin-left:10px;
+    margin-bottom: 20px;
   }
+
   .hamburger {
     position: absolute;
     top:0;

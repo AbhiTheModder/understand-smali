@@ -13,7 +13,7 @@
     bind:open
     --color="#646cff" /></div>
 
-  <Menu bind:open />
+  <Menu {open} />
   <div class="content">
     <p><strong>NOTE:</strong> </p>
     <ul>
@@ -72,7 +72,7 @@
   ></div>
 </main>
 
-<a class="Back" href="/">
+<a class="Back" href="/3">
   <button>
     ⇦
   </button>
@@ -91,6 +91,7 @@
     text-align: left;
     word-wrap: break-word;
   }
+  
   #regval {
     text-align: left;
     font-size: smaller;
@@ -102,6 +103,7 @@
     margin-right: auto;
     width: 70%;
   }
+
   #regvalexp {
     text-decoration: dotted underline;
     list-style: square;
@@ -115,20 +117,23 @@
     margin-right: auto;
     width: 70%;
   }
+
   .Next {
-    position: fixed;
-    bottom: 0;
     right: 0;
-    margin-bottom:20px;
-    margin-right:20px;
+    margin-right: 20px;
   }
+
   .Back {
+    left: 0;
+    margin-left: 20px;
+  }
+
+  .Next, .Back {
     position: fixed;
     bottom: 0;
-    left: 0;
-    margin-bottom:20px;
-    margin-left:20px;
+    margin-bottom: 20px;
   }
+
   .hamburger {
     position: absolute;
     top:0;
