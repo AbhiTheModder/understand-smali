@@ -33,7 +33,7 @@
     height: 6em;
     padding: 1.5em;
     will-change: filter;
-    transition: filter 300ms, transform 300ms;
+    transition: filter 300ms, transform 500ms;
   }
   .logo:hover {
     transform: rotate(360deg);
