@@ -7,7 +7,7 @@
 </script>
 
 <main>
-  <div class="hamburger">
+  <div class="hamburger" aria-label="Toggle navigation">
     <Hamburger
     --border-radius="0px"
     bind:open
@@ -201,12 +201,16 @@
   ></div>
 </main>
 
-<a class="Back" href="/4">
-  <button>⇦</button>
+<a class="Back" href="/4" aria-label="Go To Previous Page">
+  <button>
+    ⇦
+  </button>
 </a>
 
-<a class="Next" href="/5">
-  <button>⇨</button>
+<a class="Next" href="/" aria-label="There are no next pages, Go To Home Page">
+  <button>
+    ⇨
+  </button>
 </a>
 
 <FooterCopyright

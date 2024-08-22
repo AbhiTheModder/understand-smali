@@ -7,7 +7,7 @@
 </script>
 
 <main>
-  <div class="hamburger">
+  <div class="hamburger" aria-label="Toggle navigation">
     <Hamburger
     --border-radius="0px"
     bind:open
@@ -72,13 +72,13 @@
   ></div>
 </main>
 
-<a class="Back" href="/3">
+<a class="Back" href="/3" aria-label="Go To Previous Page">
   <button>
     ⇦
   </button>
 </a>
 
-<a class="Next" href="/5">
+<a class="Next" href="/5" aria-label="Go To Next Page">
   <button>
     ⇨
   </button>

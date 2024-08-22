@@ -5,13 +5,13 @@
 
 <main>
   <div>
-      <img src={javaLogo} class="logo java" alt="Java Logo" />
+    <img src={javaLogo} class="logo java" alt="Java Logo" />
   </div>
   <h1 class="title">Welcome to <code>understand-smali</code> wiki</h1>
 
   <p class="button Enter"> 
-    <a href="/about">
-      <button>
+    <a href="/about" aria-label="Dive into the wiki">
+      <button aria-label="Dive In">
         Dive In!
       </button>
     </a>
@@ -20,7 +20,8 @@
 
 <Footer>
   <div class="footer">
-  <FooterCopyright aClass="hover:underline" href="https://github.com/AbhiTheModder" by="AbhiTheModder" year={2024} copyrightMessage= "" /></div>
+    <FooterCopyright aClass="hover:underline" href="https://github.com/AbhiTheModder" by="AbhiTheModder" year={2024} copyrightMessage="" />
+  </div>
 </Footer>
 
 <style>
@@ -32,23 +33,22 @@
     height: 6em;
     padding: 1.5em;
     will-change: filter;
-    transition: filter 300ms;
+    transition: filter 300ms, transform 300ms;
   }
   .logo:hover {
     transform: rotate(360deg);
     filter: drop-shadow(0 0 2em #646cff);
   }
   .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-}
-@media (prefers-color-scheme: light) {
-  .footer {
-    color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
   }
-}
+  @media (prefers-color-scheme: light) {
+    .footer {
+      color: black;
+    }
+  }
 </style>

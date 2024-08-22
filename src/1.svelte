@@ -36,7 +36,7 @@
 </svelte:head>
 
 <main>
-  <div class="hamburger">
+  <div class="hamburger" aria-label="Toggle navigation">
     <Hamburger
     --border-radius="0px"
     bind:open
@@ -122,13 +122,13 @@
 ></div>
 </main>
 
-<a class="Back" href="/about">
+<a class="Back" href="/about" aria-label="Go To Previous Page">
   <button>
     ⇦
   </button>
 </a>
 
-<a class="Next" href="/2">
+<a class="Next" href="/2" aria-label="Go To Next Page">
   <button>
     ⇨
   </button>
