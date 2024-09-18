@@ -16,7 +16,7 @@
     "svelte": "^4.2.19",
     "svelte-hamburgers": "^4.2.0",
     "svelte-highlight": "^7.6.0",
-    "vite": "^5.2.0",
+    "vite": "^5.4.6",
     "vite-plugin-html": "^3.2.2"
   }
 }
