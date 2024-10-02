@@ -15,7 +15,7 @@ jobs:
       run: git clone https://github.com/AbhiTheModder/understand-smali.wiki.git
 
     - name: Install Rust
-      uses: actions-rs/toolchain@v4
+      uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
         override: true
