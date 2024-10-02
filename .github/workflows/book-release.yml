@@ -21,7 +21,7 @@ jobs:
         override: true
 
     - name: Install xelatex
-      run: apt-get install texlive-xetex
+      run: sudo apt-get install -y texlive-xetex
 
     - name: Install Crowbook
       run: cargo install crowbook
