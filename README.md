@@ -4,7 +4,11 @@ This repo is for beginners in reverse engineering (Android), who keep wondering 
 
 # Wiki
 > [!TIP]
-> repo wiki page: [https://smali.pages.dev](https://smali.pages.dev). 
+> repo wiki page: [understand-smali.wiki](https://github.com/AbhiTheModder/understand-smali.wiki.git).
+> 
+> web page: [https://smali.pages.dev](https://smali.pages.dev).
+>
+> `PDF/EPUB`: Check out [releases](https://github.com/AbhiTheModder/understand-smali/releases) section
 
 
 ### 🐩 Contributions
