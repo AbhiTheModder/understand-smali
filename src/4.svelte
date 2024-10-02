@@ -30,7 +30,7 @@
     <p><strong>Opening Bowlers:</strong>
     The <code>p</code> registers are like your opening bowlers. They&#39;re the first to get into action. In a non-static method, <code>p0</code> is the captain of the team (the <code>this</code> reference in Java), always leading from the front. For static methods, <code>p1</code> takes the lead as the first parameter register.</p>
     <p><strong>The Bowling Action:</strong>
-    Just like in cricket, where you have to bowl according to the rules, in Smali, you have to follow the ARM&#39;s calling convention. This means you set your bowlers (<code>p</code> registers) in the right order before delivering the ball (invoking the method). If you&#39;re bowling a long or double delivery (64-bit values), you need two bowlers (registers) working in tandem to handle it.</p>
+    Just like in cricket, where you have to bowl according to the rules, in Smali, you have to follow the it&#39;s calling convention. This means you set your bowlers (<code>p</code> registers) in the right order before delivering the ball (invoking the method). If you&#39;re bowling a long or double delivery (64-bit values), you need two bowlers (registers) working in tandem to handle it.</p>
     <p><strong>Fielding Adjustments:</strong>
     Sometimes, in the middle of the game, you realize you need an extra fielder (register). In Smali, this is like needing an extra register while editing code. You can&#39;t just add a player without changing the field setting (renumbering the registers). But, if you&#39;ve used the <code>p</code> naming scheme, it&#39;s like having versatile players who can adapt to any position on the field without confusion.</p>
     <p><strong>The Winning Shot:</strong>
