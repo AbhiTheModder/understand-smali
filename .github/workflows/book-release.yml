@@ -20,6 +20,9 @@ jobs:
         toolchain: stable
         override: true
 
+    - name: Install xelatex
+      run: apt-get install texlive-xetex
+
     - name: Install Crowbook
       run: cargo install crowbook
 
