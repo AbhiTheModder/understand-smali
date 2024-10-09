@@ -207,7 +207,7 @@
   </button>
 </a>
 
-<a class="Next" href="/7" aria-label="There are no next pages, Go To Home Page">
+<a class="Next" href="/6" aria-label="There are no next pages, Go To Home Page">
   <button>
     ⇨
   </button>

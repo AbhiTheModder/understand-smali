@@ -127,7 +127,7 @@
   ></div>
 </main>
 
-<a class="Back" href="/7" aria-label="Go To Previous Page">
+<a class="Back" href="/6" aria-label="Go To Previous Page">
   <button> ⇦ </button>
 </a>
 
