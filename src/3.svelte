@@ -43,7 +43,7 @@
     <p><img src="https://github.com/AbhiTheModder/understand-smali/assets/85984486/361c630c-da7f-49ce-9796-52cd5f0d2942" alt="annotely_image"></p>
     <p><code>TL;DR - I&#39;ll talk about methods, those other things also but for now focusing on registers</code></p>
     <h2 id="registers-xx"><code>.registers xx</code></h2>
-    <p><strong>Hey,</strong> Yes I&#39;m talking to you, did you see that line <code>.regsters 1</code>. <strong>Did you?</strong></p>
+    <p><strong>Hey,</strong> Yes I&#39;m talking to you, did you see that line <code>.registers 1</code>. <strong>Did you?</strong></p>
     <p>Oh, yes of course you would&#39;ve 😆, So that&#39;s what <em>defines how many registers are going to be used inside a method</em></p>
     <p><strong>YOU:</strong> So, does it mean if we use an extra register like v0,v2,v1 etc. it&#39;ll not work ?</p>
     <p><strong>ME:</strong> Yes, it&#39;ll not</p>
@@ -77,7 +77,7 @@
     <li>Also note that when there is <code>.locals</code> defined, it means an extra number for parameter registers, about which we&#39;ll talk next day. So it&#39;ll be like this
     if code has <code>.locals 1</code> it&#39;ll mean that there should/will be <em>2 local registers</em> and <em>1 param(eters) registers</em> will be allowed in that method.</li>
     </ul>
-    <p><strong>Ques.)</strong>How to increase resgister count inside a method safely and identify new usable registers?</p>
+    <p><strong>Ques.)</strong>How to increase register count inside a method safely and identify new usable registers?</p>
     <p><strong>Ans.)
       <code>Increase the register count of the method, and use the newly created registers
         the only gotcha is that the new registers aren't at the end of the register range - they're actually just before the parameter registers.
@@ -85,7 +85,7 @@
         For example, let's take a method that has 5 registers total (.registers 5), 3 of which are parameter registers. So you have v0 and v1 which are non-param registers, and p0-p2 which are the 3 parameter registers, and are aliases for v2-v4.
         
         If you need to add an additional 2 registers, you would bump it up to .registers 7. The parameter registers stay at the end of the register range, so p0-p2 are now aliased to v4-v6, and v2 and v3 are the new registers that are safe to use.</code>
-        <br> Source: <a href="https://stackoverflow.com/a/12648626"> JesusFreke on StackOverflow</a>
+        <br> Source: <a href="https://stackoverflow.com/a/12648626"> Jesus Freke on StackOverflow</a>
         <br><br> If you;re having difficulty understanding above ans by Freke, let's take an example of cricket:
       <code>Think of it like this: You’re in the middle of a cricket match with your pals, ok? There are 5 of you out there, and you’ve got this solid trio you always toss the ball to – they’re like your go-to guys, yep you get it by now we call them the ‘parameter registers,’ because passing to them feels like your second nature.<br>
         Now, imagine you want to up your game by bringing in a couple of new players, aiming to rack up more runs. But here’s the catch: you can’t just stick them at the back; that’s where your main squad is. So, you slot them in just before your usual crew. Voilà, you’ve now got a 7-player lineup!<br>

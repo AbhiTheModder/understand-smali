@@ -46,7 +46,7 @@
     <p>
       Save the changes, compile your dex file, when you run your app you'll see the modified string in action.
     </p>
-    <h2 id="example-2">Example 2: Comparisions in smali</h2>
+    <h2 id="example-2">Example 2: Comparisons in smali</h2>
     <p>
       Comparisons in smali are a bit more complex than in Java, but they follow a similar pattern. Let's take a look at an example:
     </p>
@@ -104,7 +104,7 @@
       </code>
     </pre>
     <p>
-      In the above code snippet, we have a method called <strong><code>getVersion</code></strong> that returns a string(Remember our previous days talk(s), through <code>Ljava/lang/String</code> we made it clear this method will accept strings inside it even if there were happen to be no code inside <code>getVersion</code> method, you can deduce and make your changes using these little informations) representing the version of the app.
+      In the above code snippet, we have a method called <strong><code>getVersion</code></strong> that returns a string(Remember our previous days talk(s), through <code>Ljava/lang/String</code> we made it clear this method will accept strings inside it even if there were happen to be no code inside <code>getVersion</code> method, you can deduce and make your changes using these little information's) representing the version of the app.
       <br>
       <br>
       Now suppose you have an app which relies on checks for version updates through this method and a version with <code>2.0.0</code> just came out, however there are certain function(s) which the developer removed from newer version, which you always used so you choose to stick to your <code>1.0.0</code> version, in that case because of the check, the app started prompting you for updates.
@@ -168,7 +168,7 @@
     <p>
        <strong>Note:</strong>
        <br>
-       * The <code>reg*</code> is a placeholder for the register that can be any register which is availabe in the method.
+       * The <code>reg*</code> is a placeholder for the register that can be any register which is available in the method.
        <br>
        * The <code>move-result-object</code> instruction is used to move the result of a method call to a register.
     </p>

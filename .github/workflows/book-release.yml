@@ -8,74 +8,75 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Clone wiki repo
-      run: git clone https://github.com/AbhiTheModder/understand-smali.wiki.git
+      - name: Clone wiki repo
+        run: git clone https://github.com/AbhiTheModder/understand-smali.wiki.git
 
-    - name: Install Rust
-      uses: actions-rs/toolchain@v1
-      with:
-        toolchain: stable
-        override: true
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
 
-    - name: Install xelatex
-      run: sudo apt-get install -y texlive-xetex
+      - name: Install xelatex
+        run: sudo apt-get install -y texlive-xetex
 
-    - name: Install Crowbook
-      run: cargo install --git https://github.com/crowdagger/crowbook.git
+      - name: Install Crowbook
+        run: cargo install --git https://github.com/crowdagger/crowbook.git
 
-    - name: Build PDF and EPUB
-      run: |
-        cd understand-smali.wiki
-        crowbook understand-smali.book
+      - name: Build PDF and EPUB
+        run: |
+          cd understand-smali.wiki
+          sed -i 's/```smali/```java/g' *.md
+          crowbook understand-smali.book
 
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: understand-smali
-        path: |
-          understand-smali.wiki/understand-smali.pdf
-          understand-smali.wiki/understand-smali.epub
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: understand-smali
+          path: |
+            understand-smali.wiki/understand-smali.pdf
+            understand-smali.wiki/understand-smali.epub
 
   release:
     needs: build
     runs-on: ubuntu-latest
 
     steps:
-    - name: Download artifacts
-      uses: actions/download-artifact@v4
-      with:
-        name: understand-smali
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: understand-smali
 
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: v2
-        release_name: Release v2
-        draft: false
-        prerelease: false
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v2
+          release_name: Release v2
+          draft: false
+          prerelease: false
 
-    - name: Upload PDF to release
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./understand-smali.pdf
-        asset_name: understand-smali.pdf
-        asset_content_type: application/pdf
+      - name: Upload PDF to release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./understand-smali.pdf
+          asset_name: understand-smali.pdf
+          asset_content_type: application/pdf
 
-    - name: Upload EPUB to release
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./understand-smali.epub
-        asset_name: understand-smali.epub
-        asset_content_type: application/epub+zip
+      - name: Upload EPUB to release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./understand-smali.epub
+          asset_name: understand-smali.epub
+          asset_content_type: application/epub+zip

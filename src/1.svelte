@@ -83,7 +83,7 @@
 
   <h4 id="h4">Now let's Understand this</h4>
   <img width="100%" src="https://user-images.githubusercontent.com/85984486/154001045-aaf56369-fc0f-4157-a18f-3991e90ddc85.png" alt="Java Main Method">
-  <p><b>Line 1: </b>In Java, you can simply write <code>class HelloWorld {`{your code}`}</code> <br> However, in <b>smali</b> you must add a capital "<b>L</b>" before the class name, like <code>.class public <b>L</b>HelloWorld {`{your code}`}</code>. <br> Note that there is <b>'<code>.</code>'</b> too just before 'class' defining, this is basic syntanx for each method/class/return defining in smali</p>
+  <p><b>Line 1: </b>In Java, you can simply write <code>class HelloWorld {`{your code}`}</code> <br> However, in <b>smali</b> you must add a capital "<b>L</b>" before the class name, like <code>.class public <b>L</b>HelloWorld {`{your code}`}</code>. <br> Note that there is <b>'<code>.</code>'</b> too just before 'class' defining, this is basic syntax for each method/class/return defining in smali</p>
   <p>The next line in smali: <code>[Ljava.lang.Object;</code> is the name for <code>Object[].class</code> and <code>.super</code> doing function like calling/storing of it</p>
   <br><p><b>Line 2: </b><code>.super Ljava/lang/Object;</code></p>
   <p> declares that the current class extends the Java class <code>Object</code>.</p>
@@ -102,7 +102,7 @@
   <p>In this case/example the <code>main</code> method is like the <b>front door</b> of your house. When someone wants to enter your house, they come through the front door. Similarly, when you run a Java program, the JVM enters your program through the <code>main</code> method.</p>
   <p>Another way is to think of the <code>main</code> method as the <b>starting point</b> of a race. When a race begins, all of the runners start at the same starting line. Similarly, when you run a Java program, the JVM starts executing your program at the <code>main</code> method.</p>
   <br><p><b>Line 5: </b><code>.registers 2</code></p>
-  <p> specifies that the method uses two registers. More informatin on <a href="/3">Day 3 wiki</a></p>
+  <p> specifies that the method uses two registers. More information on <a href="/3">Day 3 wiki</a></p>
   <br><p><b>Line 7: </b><code>sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;</code></p>
   <p> retrieves the <code>PrintStream</code> object associated with the standard output stream and stores it in register <code>v0</code>.</p>
   <br><p><b>Line 9: </b><code>const-string v1, "Hello World!"</code></p>
