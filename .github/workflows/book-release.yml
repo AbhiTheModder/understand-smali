@@ -2,8 +2,6 @@ name: Build and Release
 
 on:
   workflow_dispatch:
-  push:
-    branches: ["main"]
 
 jobs:
   build:
@@ -57,8 +55,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.run_number - 7 }}
-        release_name: Release ${{ github.run_number - 7 }}
+        tag_name: v2
+        release_name: Release v2
         draft: false
         prerelease: false
 
