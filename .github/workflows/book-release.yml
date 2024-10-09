@@ -2,6 +2,8 @@ name: Build and Release
 
 on:
   workflow_dispatch:
+  push:
+    branches: ["main"]
 
 jobs:
   build:
@@ -24,7 +26,7 @@ jobs:
       run: sudo apt-get install -y texlive-xetex
 
     - name: Install Crowbook
-      run: cargo install crowbook
+      run: cargo install --git https://github.com/crowdagger/crowbook.git
 
     - name: Build PDF and EPUB
       run: |
