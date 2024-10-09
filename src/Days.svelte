@@ -9,6 +9,8 @@
     <li id="li"><a href="/3">Day 3 - Registers</a></li>
     <li id="li"><a href="/4">Day 4 - Registers Conti...</a></li>
     <li id="li"><a href="/5">Day 5 - Examples</a></li>
+    <li id="li"><a href="/5">Day 6 - CrackMe's</a></li>
+    <li id="li"><a href="/new-instance">Instructions - new-instance</a></li>
   <p class="home"> 
     <a href="/" aria-label="Go To Home Page">
       <button>
