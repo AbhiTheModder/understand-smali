@@ -5,8 +5,25 @@
   import Menu from "../../lib/Menu.svelte";
 
   import { FooterCopyright } from "flowbite-svelte";
-  import "svelte-highlight/styles/github-dark.css";
   import { python } from "svelte-highlight/languages";
+
+  let prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  if (prefersDark) {
+    import("svelte-highlight/styles/github-dark.css");
+  } else {
+    import("svelte-highlight/styles/github.css");
+  }
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (event) => {
+      prefersDark = event.matches;
+      if (prefersDark) {
+        import("svelte-highlight/styles/github-dark.css");
+      } else {
+        import("svelte-highlight/styles/github.css");
+      }
+    });
 
   let code = `.method public onClick(Landroid/view/View;)V
   .registers 5

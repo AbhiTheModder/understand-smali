@@ -1,38 +1,58 @@
 <script>
   import Highlight, { LineNumbers } from "svelte-highlight";
   import java from "svelte-highlight/languages/java";
-  import ashes from "svelte-highlight/styles/ashes";
+  // import ashes from "svelte-highlight/styles/ashes";
   import { Hamburger } from "svelte-hamburgers";
   import Menu from "../../lib/Menu.svelte";
+  import { FooterCopyright } from "flowbite-svelte";
+
+  let prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  if (prefersDark) {
+    import("svelte-highlight/styles/github-dark.css");
+  } else {
+    import("svelte-highlight/styles/github.css");
+  }
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (event) => {
+      prefersDark = event.matches;
+      if (prefersDark) {
+        import("svelte-highlight/styles/github-dark.css");
+      } else {
+        import("svelte-highlight/styles/github.css");
+      }
+    });
 
   let open;
-  import { FooterCopyright } from "flowbite-svelte";
+
+  const codeStyle = `margin-bottom: 1rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: monospace;`;
 
   const codeBlocks = {
     code: `class HelloWorld {
-      public static void main(String[] args) {
-          System.out.println("Hello, World!");
-      }}
-  }`,
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}`,
     code2: `.class public LHelloWorld;
-      .super Ljava/lang/Object;
+.super Ljava/lang/Object;
 
-      .method public static main([Ljava/lang/String;)V
-      .registers 2
+.method public static main([Ljava/lang/String;)V
+  .registers 2
 
-      sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
-      const-string v1, "Hello World!"
-      invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+    const-string v1, "Hello World!"
+    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
       
-      return-void
-    .end method`,
+  return-void
+.end method`,
   };
 </script>
-
-<svelte:head>
-  {@html ashes}
-</svelte:head>
 
 <main>
   <div class="hamburger" aria-label="Toggle navigation">
@@ -128,11 +148,7 @@
 
     {#each Object.entries(codeBlocks) as [key, value]}
       <Highlight language={java} code={value} let:highlighted>
-        <LineNumbers
-          {highlighted}
-          wrapLines={true}
-          style="margin-bottom: 1rem;"
-        />
+        <LineNumbers {highlighted} wrapLines={true} style={codeStyle} />
       </Highlight>
     {/each}
 
@@ -185,8 +201,8 @@
     <p>
       Another way to think about it is that the <code>Object</code> class is the
       <b>parent class</b>
-      of all other classes in Java. When you create a new class, you are
-      essentially saying that your new class is a <b>child</b> of the
+      of all other classes in Java. When you create a new class, you are essentially
+      saying that your new class is a <b>child</b> of the
       <code>Object</code> class.
     </p>
     <ul>
@@ -219,16 +235,16 @@
     <p>
       In this case/example the <code>main</code> method is like the
       <b>front door</b>
-      of your house. When someone wants to enter your house, they come through
-      the front door. Similarly, when you run a Java program, the JVM enters
-      your program through the <code>main</code> method.
+      of your house. When someone wants to enter your house, they come through the
+      front door. Similarly, when you run a Java program, the JVM enters your program
+      through the <code>main</code> method.
     </p>
     <p>
       Another way is to think of the <code>main</code> method as the
       <b>starting point</b>
-      of a race. When a race begins, all of the runners start at the same
-      starting line. Similarly, when you run a Java program, the JVM starts
-      executing your program at the <code>main</code> method.
+      of a race. When a race begins, all of the runners start at the same starting
+      line. Similarly, when you run a Java program, the JVM starts executing your
+      program at the <code>main</code> method.
     </p>
     <br />
     <p><b>Line 5: </b><code>.registers 2</code></p>
