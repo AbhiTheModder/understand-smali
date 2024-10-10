@@ -1,6 +1,6 @@
 <script>
   import { Hamburger } from "svelte-hamburgers";
-  import Menu from "./lib/Menu.svelte";
+  import Menu from "../lib/Menu.svelte";
 
   let open;
   import { Footer, FooterCopyright } from "flowbite-svelte";
@@ -19,7 +19,7 @@
   </p>
   <br />
   <p class="title sub">Ready to dive in?</p>
-  <a href="/1" aria-label="Dive into the wiki">
+  <a href="/days/1" aria-label="Dive into the wiki">
     <button aria-label="Let's Start" class="button bounce" type="button">
       Let's Start
     </button>
@@ -114,7 +114,7 @@
   <button> ⇦ </button>
 </a>
 
-<a class="Next" href="/1" aria-label="Start Day 1">
+<a class="Next" href="/days/1" aria-label="Start Day 1">
   <button> ⇨ </button>
 </a>
 

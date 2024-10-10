@@ -2,7 +2,8 @@
   import { Hamburger } from "svelte-hamburgers";
   import Highlight from "svelte-highlight";
   import java, { smali } from "svelte-highlight/languages/smali";
-  import Menu from "./lib/Menu.svelte";
+  import Menu from "../lib/Menu.svelte";
+
   import { FooterCopyright } from "flowbite-svelte";
   import "svelte-highlight/styles/github.css";
 
@@ -127,7 +128,7 @@
   ></div>
 </main>
 
-<a class="Back" href="/6" aria-label="Go To Previous Page">
+<a class="Back" href="/days/6" aria-label="Go To Previous Page">
   <button> ⇦ </button>
 </a>
 

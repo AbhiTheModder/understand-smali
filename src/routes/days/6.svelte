@@ -2,9 +2,10 @@
   import { Hamburger } from "svelte-hamburgers";
   import Highlight, { LineNumbers } from "svelte-highlight";
   import java, { smali } from "svelte-highlight/languages/smali";
-  import Menu from "./lib/Menu.svelte";
+  import Menu from "../../lib/Menu.svelte";
+
   import { FooterCopyright } from "flowbite-svelte";
-  import "svelte-highlight/styles/github.css";
+  import "svelte-highlight/styles/github-dark.css";
   import { python } from "svelte-highlight/languages";
 
   let code = `.method public onClick(Landroid/view/View;)V
@@ -382,6 +383,12 @@ print(
   let code_10 = `  invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
   move-result-object v0`;
 
+  const codeStyle = `margin-bottom: 1rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: monospace;`;
+
   let open;
 </script>
 
@@ -392,21 +399,20 @@ print(
 
   <Menu {open} />
 
+  <h1 class="head">CrackMe challenges for Android</h1>
+
   <div class="content">
-    <h1 id="crackme-challenges-for-android">CrackMe challenges for Android</h1>
     <p>
       So let&#39;s walk through the process of cracking an Android app. Taking
       some simple crackmes first, then moving on to more complex ones.
     </p>
     <h2 id="crackme0x01">crackme0x01</h2>
-    <ul>
-      <li>Author: <a href="https://github.com/num1r0">@num1r0</a></li>
-      <li>
-        Source: <a href="https://github.com/num1r0/android_crackmes.git"
-          >https://github.com/num1r0/android_crackmes.git</a
-        >
-      </li>
-    </ul>
+    <li>Author: <a href="https://github.com/num1r0">@num1r0</a></li>
+    <li>
+      Source: <a href="https://github.com/num1r0/android_crackmes.git"
+        >num1r0/android_crackmes.git</a
+      >
+    </li>
     <h3 id="description">Description</h3>
     <p>
       The very basic crackme challenge. Gives you chance to get familiar with
@@ -425,6 +431,7 @@ print(
       <img
         src="https://raw.githubusercontent.com/wiki/AbhiTheModder/understand-smali/images/crackmes/crackme0x01.png"
         alt="password input screen"
+        width="300em"
       />
     </p>
     <p>Let&#39;s try to enter some random password and see what happens:</p>
@@ -432,6 +439,7 @@ print(
       <img
         src="https://raw.githubusercontent.com/wiki/AbhiTheModder/understand-smali/images/crackmes/crackme0x01_1.png"
         alt="alt text"
+        width="300em"
       />
       <br />We get a toast message saying &quot;Wrong password -> No flag
       :))&quot;. So let&#39;s try to find out how the app checks the password.
@@ -513,8 +521,8 @@ print(
     <Highlight language={smali} {code} let:highlighted
       ><LineNumbers
         {highlighted}
-        wrapLines={false}
-        style="margin-bottom: 1rem;"
+        wrapLines={true}
+        style={codeStyle}
       /></Highlight
     >
     <p>
@@ -535,6 +543,7 @@ print(
       <img
         src="https://raw.githubusercontent.com/wiki/AbhiTheModder/understand-smali/images/crackmes/crackme0x01_2.png"
         alt="alt text"
+        width="300em"
       />
     </p>
     <p>
@@ -554,8 +563,8 @@ print(
     <Highlight language={smali} code={code_8} let:highlighted
       ><LineNumbers
         {highlighted}
-        wrapLines={false}
-        style="margin-bottom: 1rem;"
+        wrapLines={true}
+        style={codeStyle}
       /></Highlight
     >
     <p>
@@ -581,21 +590,42 @@ print(
     <Highlight
       language={smali}
       code="iget-object v0, p0, Lcom/entebra/crackme0x01/MainActivity$1;->val$edtTxt:Landroid/widget/EditText;"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       This grabs the <code class="code">EditText</code> widget of
       <code class="code">android.widget.EditText</code>
       and puts it into the <code class="code">v0</code> register. In Java, this would
       be something like this:
     </p>
-    <Highlight language={java} code="EditText editText = this.val$edtTxt;" />
+    <Highlight
+      language={java}
+      code="EditText editText = this.val$edtTxt;"
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       So, The box where we enter the password is stored in <code class="code"
         >v0</code
       > register.
     </p>
     <p>Next:</p>
-    <Highlight language={smali} code={code_10} />
+    <Highlight language={smali} code={code_10} let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       This calls the <code class="code">getText()</code> method on the
       <code class="code">EditText</code>
@@ -604,12 +634,27 @@ print(
       <code class="code">EditText</code>) back in <code class="code">v0</code>.
       In Java:
     </p>
-    <Highlight language={java} code="Editable text = editText.getText();" />
+    <Highlight
+      language={java}
+      code="Editable text = editText.getText();"
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <Highlight
       language={smali}
       code=" invoke-virtual {`{v0}`}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 move-result-object v0"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       Then, the text from the <code class="code">EditText</code> is stored in
       <code class="code">v0</code>
@@ -620,7 +665,13 @@ move-result-object v0"
       language={smali}
       code=" invoke-virtual {`{v0}`}, Landroid/text/Editable;->toString()Ljava/lang/String;
 move-result-object v0"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>In Java:</p>
     <p>
       <strong>Why?</strong> Well 🤨, because the
@@ -642,12 +693,24 @@ move-result-object v0"
       language={smali}
       code=" invoke-virtual {`{p1, v0}`}, Lcom/entebra/crackme0x01/FlagGuard;->getFlag(Ljava/lang/String;)Ljava/lang/String;
 move-result-object p1"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>In Java:</p>
     <Highlight
       language={java}
       code="String flag = flagGuard.getFlag(textString);"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       Here, the <code class="code">getFlag()</code> method is called on the
       <code class="code">FlagGuard</code>
@@ -678,8 +741,8 @@ move-result-object p1"
     <Highlight language={smali} code={code_7} let:highlighted
       ><LineNumbers
         {highlighted}
-        wrapLines={false}
-        style="margin-bottom: 1rem;"
+        wrapLines={true}
+        style={codeStyle}
       /></Highlight
     >
     <p>
@@ -698,8 +761,8 @@ move-result-object p1"
     <Highlight language={smali} code={code_6} let:highlighted
       ><LineNumbers
         {highlighted}
-        wrapLines={false}
-        style="margin-bottom: 1rem;"
+        wrapLines={true}
+        style={codeStyle}
       /></Highlight
     >
     <p>
@@ -714,6 +777,7 @@ move-result-object p1"
       <img
         src="https://raw.githubusercontent.com/wiki/AbhiTheModder/understand-smali/images/crackmes/crackme0x01_3.png"
         alt="alt text"
+        width="300em"
       />
     </p>
     <p>and wohooo🥳, we got the flag.</p>
@@ -729,8 +793,8 @@ move-result-object p1"
     <Highlight language={smali} code={code_5} let:highlighted
       ><LineNumbers
         {highlighted}
-        wrapLines={false}
-        style="margin-bottom: 1rem;"
+        wrapLines={true}
+        style={codeStyle}
       /></Highlight
     >
     <p>
@@ -753,9 +817,24 @@ move-result-object p1"
       language={smali}
       code=" new-instance v0, Ljava/lang/StringBuilder;
 invoke-direct {`{v0}`}, Ljava/lang/StringBuilder;-><init>()V"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>In Java, this corresponds to:</p>
-    <Highlight language={java} code="StringBuilder sb = new StringBuilder();" />
+    <Highlight
+      language={java}
+      code="StringBuilder sb = new StringBuilder();"
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       So, The method first starts by creating an instance of <code class="code"
         >StringBuilder</code
@@ -770,7 +849,13 @@ invoke-direct {`{v0}`}, Ljava/lang/StringBuilder;-><init>()V"
       code=" const-wide v1, 0x4094e40000000000L  # 1337.0
 invoke-static {`{v1, v2}`}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
 move-result-object v1"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       Here, the value <code class="code">1337.0</code> is loaded into registers
       as a double(why? Lol, I remember telling you about necessary mnemonics in
@@ -778,11 +863,20 @@ move-result-object v1"
       <code class="code">valueOf</code>
       contains <code class="code">D</code> inside it&#39;s brackets and
       <code class="code">D</code>
-      means double (64 bit) in smali). It converts the double into a string
-      representation using <code class="code">valueOf()</code>.
+      means double (64 bit) in smali). It converts the double into a string representation
+      using <code class="code">valueOf()</code>.
     </p>
     <p>In Java:</p>
-    <Highlight language={java} code="String str = String.valueOf(1337.0);" />
+    <Highlight
+      language={java}
+      code="String str = String.valueOf(1337.0);"
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       It&#39;s converting <code class="code">1337.0</code> into the string
       <code class="code">&quot;1337&quot;</code>
@@ -792,12 +886,24 @@ move-result-object v1"
       code=" const-string v2, &quot;\\.&quot;
 invoke-virtual {`{v1, v2}`}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 move-result-object v1"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>In Java:</p>
     <Highlight
       language={java}
       code="String[] parts = str.split(&quot;\\.&quot;);"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       The method splits the string <code class="code">&quot;1337.0&quot;</code>
       on the
@@ -812,12 +918,27 @@ invoke-static {`{v1}`}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/la
 move-result-object v1
 invoke-virtual {`{v1}`}, Ljava/lang/Integer;->intValue()I
 move-result v1"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       The string <code class="code">&quot;1337&quot;</code> is converted into an
       integer:
     </p>
-    <Highlight language={java} code="int num = Integer.valueOf(parts[0]);" />
+    <Highlight
+      language={java}
+      code="int num = Integer.valueOf(parts[0]);"
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       So, <code class="code">v1</code> now holds the integer value
       <code class="code">1337</code>. This number is key to unscrambling the
@@ -828,7 +949,13 @@ move-result v1"
       code=" const-string v3, &quot;qw4r_q0c_nc4nvx3_0i01_srq82q8mx&quot;
 invoke-virtual {`{v3}`}, Ljava/lang/String;->toCharArray()[C
 move-result-object v3"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       The scrambled string <code class="code"
         >&quot;qw4r_q0c_nc4nvx3_0i01_srq82q8mx&quot;</code
@@ -838,7 +965,13 @@ move-result-object v3"
     <Highlight
       language={java}
       code="char[] scrambled = &quot;qw4r_q0c_nc4nvx3_0i01_srq82q8mx&quot;.toCharArray();"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       The method is now preparing to loop through each character and unscramble
       it.
@@ -848,9 +981,21 @@ move-result-object v3"
       code=" :goto_0
 if-ge v2, v4, :cond_2
 aget-char v5, v3, v2"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>In Java:</p>
-    <Highlight language={java} code={code_2} />
+    <Highlight language={java} code={code_2} let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       The loop goes through each character in the scrambled string, storing the
       current character in <code class="code">v5</code>.
@@ -860,20 +1005,38 @@ aget-char v5, v3, v2"
       code=" invoke-static {`{v5}`}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
 move-result-object v7
 invoke-static {`{v6, v7}`}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>Skip...</p>
     <p>In Java:</p>
     <Highlight
       language={java}
       code="Log.e(&quot;Char: &quot;, String.valueOf(c));"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>Skip, skip....</p>
     <Highlight
       language={smali}
       code=" const-string v6, &quot;abcdefghijklmnopqrstuvwxyz&quot;
 invoke-virtual {`{v6, v5}`}, Ljava/lang/String;->indexOf(I)I
 move-result v6"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       The method looks for the character&#39;s position in the alphabet. If the
       character is found in the string <code class="code"
@@ -883,7 +1046,13 @@ move-result v6"
     <Highlight
       language={java}
       code="int index = &quot;abcdefghijklmnopqrstuvwxyz&quot;.indexOf(c);"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       If the character is found in the alphabet (i.e., <code class="code"
         >index >= 0</code
@@ -894,7 +1063,13 @@ move-result v6"
       language={smali}
       code=" sub-int/2addr v6, v1
 rem-int/2addr v6, v5"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       The first one subtracts <code class="code">1337</code> from the index and
       wraps it around if necessary, then second one using the remainder (<code
@@ -902,7 +1077,13 @@ rem-int/2addr v6, v5"
       >) to ensure the new index is within the bounds of the alphabet.
     </p>
     <p>In Java:</p>
-    <Highlight language={java} code={code_3} />
+    <Highlight language={java} code={code_3} let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       Finally, the unscrambled character is appended to the <code class="code"
         >StringBuilder</code
@@ -911,9 +1092,21 @@ rem-int/2addr v6, v5"
     <Highlight
       language={smali}
       code="invoke-virtual {`{v0, v5}`}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
-    />
+      let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>In Java:</p>
-    <Highlight language={java} code={code_9} />
+    <Highlight language={java} code={code_9} let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>This is repeated for every character in the scrambled string.</p>
     <p>
       So, The <code class="code">unscramble()</code> method is essentially a
@@ -936,7 +1129,13 @@ rem-int/2addr v6, v5"
       so I would write a simple python script to unscramble it. Like this one
       below:
     </p>
-    <Highlight language={python} code={code_4} />
+    <Highlight language={python} code={code_4} let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>Hope this helps and you enjoyed reading this.</p>
     <p><strong>Happy Reversing!</strong></p>
   </div>
@@ -949,7 +1148,7 @@ rem-int/2addr v6, v5"
   ></div>
 </main>
 
-<a class="Back" href="/5" aria-label="Go To Previous Page">
+<a class="Back" href="/days/5" aria-label="Go To Previous Page">
   <button> ⇦ </button>
 </a>
 
@@ -969,6 +1168,14 @@ rem-int/2addr v6, v5"
   .content {
     text-align: left;
     word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  .head {
+    font-size: large;
+    font-weight: 700;
+    text-decoration: underline;
+    text-align: center;
   }
 
   .Next,
