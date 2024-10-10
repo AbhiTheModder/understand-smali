@@ -1,16 +1,38 @@
 <script>
   import { Hamburger } from "svelte-hamburgers";
-  import Highlight from "svelte-highlight";
+  import Highlight, { LineNumbers } from "svelte-highlight";
   import java, { smali } from "svelte-highlight/languages/smali";
   import Menu from "../lib/Menu.svelte";
 
   import { FooterCopyright } from "flowbite-svelte";
-  import "svelte-highlight/styles/github.css";
+  let prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  if (prefersDark) {
+    import("svelte-highlight/styles/github-dark.css");
+  } else {
+    import("svelte-highlight/styles/github.css");
+  }
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (event) => {
+      prefersDark = event.matches;
+      if (prefersDark) {
+        import("svelte-highlight/styles/github-dark.css");
+      } else {
+        import("svelte-highlight/styles/github.css");
+      }
+    });
 
   let code = `new-instance p1, Lcom/example/MyInstance;`;
   let code_2 = `FlagGuard flagGuard = new FlagGuard();`;
   let code_3 = `new-instance p1, Lcom/entebra/crackme0x01/FlagGuard;`;
   let code_4 = `invoke-direct {p1}, Lcom/entebra/crackme0x01/FlagGuard;-><init>()V`;
+
+  const codeStyle = `margin-bottom: 1rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: monospace;`;
 
   let open;
 </script>
@@ -39,7 +61,13 @@
       >. One common Smali instruction is <code>new-instance</code>. Most of the
       time when working on Android RE APKs, often you will see lines like this:
     </p>
-    <Highlight language={smali} {code} />
+    <Highlight language={smali} {code} let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       This creates a new instance of a class. The <code>p1</code> is a register
       that contains the reference to the newly created instance. The
@@ -72,9 +100,21 @@
       class and stores its reference in a register. In Java, you might do something
       like:
     </p>
-    <Highlight language={smali} code={code_2} />
+    <Highlight language={smali} code={code_2} let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>In Smali, this is represented by:</p>
-    <Highlight language={smali} code={code_3} />
+    <Highlight language={smali} code={code_3} let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>Here’s a breakdown:</p>
     <ul>
       <li>
@@ -106,7 +146,13 @@
       </li>
       <li><strong>Call the constructor</strong>.</li>
     </ol>
-    <Highlight language={smali} code={code_4} />
+    <Highlight language={smali} code={code_4} let:highlighted
+      ><LineNumbers
+        {highlighted}
+        wrapLines={true}
+        style={codeStyle}
+      /></Highlight
+    >
     <p>
       This line directly calls the constructor <code>-&gt;&lt;init&gt;()V</code>
       of the <code>FlagGuard</code> class on the newly created object stored in
