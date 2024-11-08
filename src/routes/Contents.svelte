@@ -3,13 +3,11 @@
 </script>
 
 <main>
-  <h1 class="title">Days</h1>
-  <li id="li"><a href="/days/1">Day 1 - Introduction</a></li>
-  <li id="li"><a href="/days/2">Day 2 - Basics</a></li>
-  <li id="li"><a href="/days/3">Day 3 - Registers</a></li>
-  <li id="li"><a href="/days/4">Day 4 - Registers Conti...</a></li>
-  <li id="li"><a href="/days/5">Day 5 - Examples</a></li>
-  <li id="li"><a href="/days/5">Day 6 - CrackMe's</a></li>
+  <h1 class="title">Table of Contents</h1>
+  <li id="li"><a href="/days">Days</a></li>
+  <li id="li">
+    <a href="/instructions">Instructions</a>
+  </li>
   <p class="home">
     <a href="/about" aria-label="Go To Home Page">
       <button> Back to Home </button>

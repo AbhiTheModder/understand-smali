@@ -592,7 +592,7 @@ print(
       <code class="code">FlagGuard</code>
       class. To Understand <code class="code">new-instance</code> better you can
       read
-      <a href="https://smali.pages.dev/new-instance">new-instance</a> i&#39;ve made
+      <a href="https://smali.pages.dev/instructions/new-instance">new-instance</a> i&#39;ve made
       sure to use this same example to make it easier for you to understand.
     </p>
     <p>
@@ -859,7 +859,7 @@ invoke-direct {`{v0}`}, Ljava/lang/StringBuilder;-><init>()V"
       class object, which will be used to build the final unscrambled string. Again
       if you want to know about <code class="code">new-instance</code> you can
       refer to
-      <a href="https://smali.pages.dev/new-instance">new-instance</a>.
+      <a href="https://smali.pages.dev/instructions/new-instance">new-instance</a>.
     </p>
     <Highlight
       language={smali}

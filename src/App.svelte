@@ -2,11 +2,15 @@
   import { Router, Route } from "svelte-routing";
   import Home from "./routes/Home.svelte";
   import About from "./routes/about.svelte";
-  import NewInstance from "./routes/new-instance.svelte";
+  import Contents from "./routes/Contents.svelte";
   import Days from "./routes/Days.svelte";
+  import Instructions from "./routes/Instructions.svelte";
 
   let days = Array.from({ length: 7 }, (_, i) => i + 1);
+  let instructions = ["invoke-custom", "new-instance"];
   let loadComponent = (path) => () => import(`./routes/days/${path}.svelte`);
+  let loadComponentInstructions = (path) => () =>
+    import(`./routes/instructions/${path}.svelte`);
   let url = "";
 
   const dayTitles = {
@@ -28,8 +32,9 @@
     } else if (path.startsWith("/days/")) {
       const day = path.split("/").pop();
       document.title = dayTitles[day] || `Day ${day} - Understand Smali`;
-    } else if (path === "/new-instance") {
-      document.title = "Instructions - new-instance";
+    } else if (path.startsWith("/instructions/")) {
+      const instruction = path.split("/").pop();
+      document.title = `Instructions - ${instruction}`;
     } else if (path === "/days") {
       document.title = "Days Overview - Understand Smali";
     } else {
@@ -46,8 +51,15 @@
     {#each days as day}
       <Route path={`/days/${day}`} component={loadComponent(day)} />
     {/each}
-    <Route path="/new-instance" component={NewInstance} />
+    {#each instructions as instruction}
+      <Route
+        path={`/instructions/${instruction}`}
+        component={loadComponentInstructions(instruction)}
+      />
+    {/each}
+    <Route path="/contents" component={Contents} />
     <Route path="/days" component={Days} />
+    <Route path="/instructions" component={Instructions} />
     <Route path="*"><h1>Not found</h1></Route>
   </div>
 </Router>

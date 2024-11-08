@@ -8,7 +8,7 @@
 
 {#if open}
   <div class="menu">
-    {#each ["Home", "Days", "About", "Contact"] as mainlink, i}
+    {#each ["Home", "Contents", "About", "Contact"] as mainlink, i}
       <p>
         {#if mainlink === "Contact"}
           <a
@@ -37,19 +37,9 @@
 {/if}
 
 {#if showContactMe}
-  <div class="contact-form">
-    <h3>Contact Me</h3>
-    <p>Just Comment at the bottom of any <br /> page of this website.</p>
-    <p class="contact-form button">
-      <a href="#chirpy-comment">
-        <button> Click Here </button>
-      </a>
-    </p>
-  </div>
-  <div
-    class="bar"
-    transition:scale={{ duration: 850, easing: quadOut, opacity: 1 }}
-  />
+  <script>
+    window.open("https://t.me/AbhiTheM0dder", "_blank");
+  </script>
 {/if}
 
 <style>
@@ -60,12 +50,6 @@
     padding: 1em;
     padding-top: 0;
     color: rgb(64, 64, 85);
-  }
-  .contact-form {
-    text-align: center;
-    font-weight: 50;
-    letter-spacing: 0.15em;
-    padding-top: 0;
   }
 
   p {

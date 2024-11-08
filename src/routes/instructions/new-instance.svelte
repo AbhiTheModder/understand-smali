@@ -2,7 +2,7 @@
   import { Hamburger } from "svelte-hamburgers";
   import Highlight, { LineNumbers } from "svelte-highlight";
   import java, { smali } from "svelte-highlight/languages/smali";
-  import Menu from "../lib/Menu.svelte";
+  import Menu from "../../lib/Menu.svelte";
 
   import { FooterCopyright } from "flowbite-svelte";
   let prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
