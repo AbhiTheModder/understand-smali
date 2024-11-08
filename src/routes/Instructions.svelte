@@ -6,6 +6,9 @@
   <h1 class="title">Instructions</h1>
   <li id="li"><a href="/instructions/new-instance">new-instance</a></li>
   <li id="li"><a href="/instructions/invoke-custom">invoke-custom</a></li>
+  <li id="li">
+    <a href="/instructions/invoke-polymorphic">invoke-polymorphic</a>
+  </li>
   <p class="home">
     <a href="/about" aria-label="Go To Home Page">
       <button> Back to Home </button>

@@ -23,14 +23,14 @@
       }
     });
 
-  const code = `invoke-custom {vC, vD, vE, vF, vG}, call_site@BBBB`;
+  const code = `  invoke-custom {vC, vD, vE, vF, vG}, call_site@BBBB`;
   const code_2 = `{
     bootstrap_method: VALUE_METHOD_HANDLE (e.g., LambdaMetafactory.metafactory),
-    method_name: VALUE_STRING (e.g., &quot;isSplitMetaElement&quot;),
+    method_name: VALUE_STRING (e.g., "isSplitMetaElement"),
     method_type: VALUE_METHOD_TYPE (e.g., (Lcom/reandroid/arsc/chunk/xml/ResXmlElement;)Z)
 }`;
   const code_3 = `FilterIterator.of(manifest.recursiveElements(), ApkSplitInfoCleaner::isSplitMetaElement)`;
-  const code_4 = `invoke-custom {}, call_site_2("test", ()Ljava/util/function/Predicate;, (Ljava/lang/Object;)Z, invoke-static@Lcom/reandroid/apk/ApkSplitInfoCleaner;->isSplitMetaElement(Lcom/reandroid/arsc/chunk/xml/ResXmlElement;)Z, (Lcom/reandroid/arsc/chunk/xml/ResXmlElement;)Z)@Ljava/lang/invoke/LambdaMetafactory;->metafactory(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;`;
+  const code_4 = `  invoke-custom {}, call_site_2("test", ()Ljava/util/function/Predicate;, (Ljava/lang/Object;)Z, invoke-static@Lcom/reandroid/apk/ApkSplitInfoCleaner;->isSplitMetaElement(Lcom/reandroid/arsc/chunk/xml/ResXmlElement;)Z, (Lcom/reandroid/arsc/chunk/xml/ResXmlElement;)Z)@Ljava/lang/invoke/LambdaMetafactory;->metafactory(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;`;
 
   const codeStyle = `margin-bottom: 1rem;
       padding: 5px;
@@ -55,12 +55,12 @@
       was introduced to enable flexible, dynamic invocation of methods. It plays
       a crucial role in dynamic method handling, particularly useful for lambda
       expressions and functional programming in Java and allows Dalvik VM to
-      dynamically call methods at runtime by referencing a &quot;call
-      site&quot;, which points to specific runtime metadata defining the method
-      to be called. In simple terms, <code>invoke-custom</code> makes it
-      possible to execute methods that are not directly known or accessible at
-      compile time but are defined dynamically when the application runs. This
-      dynamic invocation mechanism aligns with Java&#39;s
+      dynamically call methods at runtime by referencing a "call site", which
+      points to specific runtime metadata defining the method to be called. In
+      simple terms, <code>invoke-custom</code> makes it possible to execute
+      methods that are not directly known or accessible at compile time but are
+      defined dynamically when the application runs. This dynamic invocation
+      mechanism aligns with Java&#39;s
       <code>java.lang.invoke</code> API and provides key support for features like
       lambda expressions.
     </p>
@@ -81,9 +81,9 @@
         passed to the invoked method.
       </li>
       <li>
-        <code>call_site@BBBB</code>: Reference to a &quot;call site&quot; in the
-        DEX file (identified by the index <code>BBBB</code>), which points to a
-        method and the metadata required for invocation.
+        <code>call_site@BBBB</code>: Reference to a "call site" in the DEX file
+        (identified by the index <code>BBBB</code>), which points to a method
+        and the metadata required for invocation.
       </li>
     </ul>
     <p>Each <code>invoke-custom</code> instruction has the following fields:</p>
@@ -112,10 +112,10 @@
     </p>
     <ol>
       <li>
-        <strong>Bootstrap Method Handle</strong>: A reference to a
-        &quot;bootstrap&quot; method that sets up the call site. This method
-        typically belongs to classes like <code>LambdaMetafactory</code> in Java
-        and must return a <code>java.lang.invoke.CallSite</code>.
+        <strong>Bootstrap Method Handle</strong>: A reference to a "bootstrap"
+        method that sets up the call site. This method typically belongs to
+        classes like <code>LambdaMetafactory</code> in Java and must return a
+        <code>java.lang.invoke.CallSite</code>.
       </li>
       <li>
         <strong>Method Name</strong>: A string representing the name of the
@@ -249,7 +249,8 @@
       <code>invoke-custom</code>
       is for more general dynamic invocation, <code>invoke-polymorphic</code> is
       restricted to methods directly supporting polymorphic invocation in
-      <code>MethodHandle</code>.
+      <code>MethodHandle</code>. Read more about it
+      <a href="/instructions/invoke-polymorphic">here</a>
     </p>
     <h2 id="lambdas-and-invoke-custom">
       Lambdas and <strong><code>invoke-custom</code></strong>
@@ -264,7 +265,8 @@
       support dynamic calls similar to Java’s <code>invokedynamic</code>,
       standard lambdas don’t typically get compiled into
       <code>invoke-custom</code>. Instead, they are often translated into
-      <strong>anonymous inner classes</strong>(like if you do in an android project they get converted to synthetic subclasses)
+      <strong>anonymous inner classes</strong>(like if you do in an android
+      project they get converted to synthetic subclasses)
       <strong>or something similar in the DEX files</strong>.
     </p>
     <h2 id="when-invoke-custom-is-actually-used">
@@ -294,6 +296,9 @@
           >REAndroid/ARSCLib for code examples</a
         >
       </li>
+      <li>
+        <a href="https://stackoverflow.com/a/52708946">Stack Answer</a>
+      </li>
     </ul>
   </div>
 
@@ -305,11 +310,19 @@
   ></div>
 </main>
 
-<a class="Back" href="/days/6" aria-label="Go To Previous Page">
+<a
+  class="Back"
+  href="/instructions/new-instance"
+  aria-label="Go To Previous Page"
+>
   <button> ⇦ </button>
 </a>
 
-<a class="Next" href="/" aria-label="There are no next pages, Go To Home Page">
+<a
+  class="Next"
+  href="/instructions/invoke-polymorphic"
+  aria-label="There are no next pages, Go To Home Page"
+>
   <button> ⇨ </button>
 </a>
 

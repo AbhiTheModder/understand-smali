@@ -7,7 +7,7 @@
   import Instructions from "./routes/Instructions.svelte";
 
   let days = Array.from({ length: 7 }, (_, i) => i + 1);
-  let instructions = ["invoke-custom", "new-instance"];
+  let instructions = ["invoke-custom", "new-instance", "invoke-polymorphic"];
   let loadComponent = (path) => () => import(`./routes/days/${path}.svelte`);
   let loadComponentInstructions = (path) => () =>
     import(`./routes/instructions/${path}.svelte`);
