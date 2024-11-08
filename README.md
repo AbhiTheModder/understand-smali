@@ -1,6 +1,8 @@
 # understand-smali 
 This repo is for beginners in reverse engineering (Android), who keep wondering about everything inside smali.
 
+[![Build and Release](https://github.com/AbhiTheModder/understand-smali/actions/workflows/book-release.yml/badge.svg)](https://github.com/AbhiTheModder/understand-smali/actions/workflows/book-release.yml)
+
 
 # Wiki
 > [!TIP]
