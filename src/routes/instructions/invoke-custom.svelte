@@ -237,7 +237,9 @@
         expression matching a functional interface.
       </li>
     </ol>
-    <h3 id="invoke-polymorphic"><code>invoke-polymorphic</code></h3>
+    <h3 id="invoke-polymorphic">
+      <strong><code>invoke-polymorphic</code></strong>
+    </h3>
     <p>
       <code>invoke-polymorphic</code> is another bytecode instruction (Also
       introduced starting from DEX version 038 onwards) similar to
@@ -249,6 +251,36 @@
       restricted to methods directly supporting polymorphic invocation in
       <code>MethodHandle</code>.
     </p>
+    <h2 id="lambdas-and-invoke-custom">
+      Lambdas and <strong><code>invoke-custom</code></strong>
+    </h2>
+    <p>
+      In Java bytecode, lambda expressions usually get implemented through
+      something called the <strong><code>LambdaMetafactory</code></strong>,
+      which can create a functional interface at runtime.
+    </p>
+    <p>
+      In Android’s Dalvik bytecode, even though <code>invoke-custom</code> can
+      support dynamic calls similar to Java’s <code>invokedynamic</code>,
+      standard lambdas don’t typically get compiled into
+      <code>invoke-custom</code>. Instead, they are often translated into
+      <strong>anonymous inner classes</strong>(like if you do in an android project they get converted to synthetic subclasses)
+      <strong>or something similar in the DEX files</strong>.
+    </p>
+    <h2 id="when-invoke-custom-is-actually-used">
+      When <code>invoke-custom</code> is Actually Used
+    </h2>
+    <p><code>invoke-custom</code> is intended for scenarios that need:</p>
+    <ol>
+      <li>
+        <strong>Dynamic method resolution</strong> through a
+        <strong>call site</strong>.
+      </li>
+      <li>
+        <strong>Special handling</strong> by a bootstrap method that isn’t just simple
+        functional interface invocation.
+      </li>
+    </ol>
 
     <h3 id="references">References</h3>
     <ul>
