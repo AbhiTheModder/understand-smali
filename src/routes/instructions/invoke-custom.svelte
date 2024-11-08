@@ -252,37 +252,6 @@
       <code>MethodHandle</code>. Read more about it
       <a href="/instructions/invoke-polymorphic">here</a>
     </p>
-    <h2 id="lambdas-and-invoke-custom">
-      Lambdas and <strong><code>invoke-custom</code></strong>
-    </h2>
-    <p>
-      In Java bytecode, lambda expressions usually get implemented through
-      something called the <strong><code>LambdaMetafactory</code></strong>,
-      which can create a functional interface at runtime.
-    </p>
-    <p>
-      In Android’s Dalvik bytecode, even though <code>invoke-custom</code> can
-      support dynamic calls similar to Java’s <code>invokedynamic</code>,
-      standard lambdas don’t typically get compiled into
-      <code>invoke-custom</code>. Instead, they are often translated into
-      <strong>anonymous inner classes</strong>(like if you do in an android
-      project they get converted to synthetic subclasses)
-      <strong>or something similar in the DEX files</strong>.
-    </p>
-    <h2 id="when-invoke-custom-is-actually-used">
-      When <code>invoke-custom</code> is Actually Used
-    </h2>
-    <p><code>invoke-custom</code> is intended for scenarios that need:</p>
-    <ol>
-      <li>
-        <strong>Dynamic method resolution</strong> through a
-        <strong>call site</strong>.
-      </li>
-      <li>
-        <strong>Special handling</strong> by a bootstrap method that isn’t just simple
-        functional interface invocation.
-      </li>
-    </ol>
 
     <h3 id="references">References</h3>
     <ul>
