@@ -75,9 +75,13 @@
   </div>
   <div class="subheadgroup six">
     <li class="li">
-      <b>Android Dalvik OPCODES</b>:
+      <b>Android Dalvik OPCODES & bytecode</b>:
       <a
         href="https://developer.android.com/reference/dalvik/bytecode/Opcodes.html"
+        >Click Here</a
+      > |
+      <a
+        href="https://source.android.com/docs/core/runtime/dalvik-bytecode"
         >Click Here</a
       >
     </li>
