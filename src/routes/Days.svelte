@@ -9,7 +9,7 @@
   <li id="li"><a href="/days/3">Day 3 - Registers</a></li>
   <li id="li"><a href="/days/4">Day 4 - Registers Conti...</a></li>
   <li id="li"><a href="/days/5">Day 5 - Examples</a></li>
-  <li id="li"><a href="/days/5">Day 6 - CrackMe's</a></li>
+  <li id="li"><a href="/days/6">Day 6 - CrackMe's</a></li>
   <p class="home">
     <a href="/about" aria-label="Go To Home Page">
       <button> Back to Home </button>
