@@ -40,11 +40,12 @@
   </div>
   <div class="subheadgroup two">
     <li class="li">
-      List of smali <b>opcodes</b> table [pdf]:
+      List of smali <b>opcodes</b> table:
       <a
         href="https://github.com/AbhiTheModder/understand-smali/blob/main/smali-opcodes/Smali%20-%20Table%20Of%20Java%20Opcode's.pdf"
-        >Download</a
+        >PDF</a
       >
+      | <a href="/opcodes">WEB</a>
     </li>
   </div>
   <div class="subheadgroup three">
@@ -79,9 +80,9 @@
       <a
         href="https://developer.android.com/reference/dalvik/bytecode/Opcodes.html"
         >Click Here</a
-      > |
-      <a
-        href="https://source.android.com/docs/core/runtime/dalvik-bytecode"
+      >
+      |
+      <a href="https://source.android.com/docs/core/runtime/dalvik-bytecode"
         >Click Here</a
       >
     </li>
