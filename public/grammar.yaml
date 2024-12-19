@@ -207,7 +207,7 @@
   example: "0F00 - return v0"
   example_desc: "Returns with return value in v0."
 
-  - opcode: "10"
+- opcode: "10"
   name: "return-wide"
   format: "AA|op"
   format_id: "11x"
@@ -219,7 +219,7 @@
   example: "1000 - return-wide v0"
   example_desc: "Returns with a double/long value in v0,v1."
 
-  - opcode: "11"
+- opcode: "11"
   name: "return-object"
   format: "AA|op"
   format_id: "11x"
