@@ -1,0 +1,46 @@
+name: Update grammar
+
+on:
+  repository_dispatch:
+    types:
+      - grammar-updated
+
+jobs:
+  update-grammar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Main repository
+        uses: actions/checkout@v3
+
+      - name: Checkout smalig repository
+        uses: actions/checkout@v3
+        with:
+          repository: RevEngiSquad/smalig
+          path: smalig
+
+      - name: Update file
+        run: |
+          ls -R
+          cd smalig
+          mv smalig/grammar.yaml > ../smali-opcodes/grammar.yaml
+          cd ..
+
+      - name: Commit changes
+        run: |
+          git add ./smali-opcodes/grammar.yaml
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          echo "file_updated=true" >> $GITHUB_ENV
+
+      - name: Create Pull Request
+        if: success() && env.file_updated == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update smali-opcodes/grammar.yaml"
+          branch: update-grammar-file
+          title: "Update for grammar file"
+          body: "This PR updates the smali-opcodes/grammar.yaml file with the latest changes."
