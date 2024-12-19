@@ -125,23 +125,6 @@
     font-weight: bold;
   }
 
-  .Next {
-    right: 0;
-    margin-right: 20px;
-  }
-
-  .Back {
-    left: 0;
-    margin-left: 20px;
-  }
-
-  .Next,
-  .Back {
-    position: fixed;
-    bottom: 0;
-    margin-bottom: 20px;
-  }
-
   .hamburger {
     position: absolute;
     top: 0;
