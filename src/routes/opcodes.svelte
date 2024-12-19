@@ -4,7 +4,7 @@
   import { parse } from "yaml";
   import { onMount } from "svelte";
 
-  const yaml_file = "../../smali-opcodes/grammar.yaml";
+  const yaml_file = "src/assets/grammar.yaml";
 
   let yamlData = [];
   let filteredData = [];
@@ -34,11 +34,11 @@
   </div>
 
   <Menu {open} />
-  <div class="search-container">
-    <input type="text" placeholder="Search..." bind:value={searchQuery} />
-  </div>
   <div class="content">
-    <h1>Smali Opcodes</h1>
+    <h1>Dalvik Bytecode (Smali) Opcodes</h1>
+    <div class="search-container">
+      <input type="text" placeholder="Search..." bind:value={searchQuery} />
+    </div>
     <pre>{#if filteredData.length > 0}
         <table>
         <thead>
@@ -88,7 +88,7 @@
 
 <style>
   .content {
-    text-align: left;
+    text-align: center;
   }
 
   .search-container {

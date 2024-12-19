@@ -21,7 +21,7 @@ jobs:
 
       - name: Update file
         run: |
-          mv ./smalig/smalig/grammar.yaml ./smali-opcodes/grammar.yaml
+          mv ./smalig/smalig/grammar.yaml ./src/assets/grammar.yaml
           rm -r smalig
 
       - name: Commit changes
