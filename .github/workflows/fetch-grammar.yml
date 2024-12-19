@@ -23,7 +23,7 @@ jobs:
         run: |
           ls -R
           cd smalig
-          mv smalig/grammar.yaml > ../smali-opcodes/grammar.yaml
+          mv smalig/grammar.yaml ../smali-opcodes/grammar.yaml
           cd ..
 
       - name: Commit changes
