@@ -78,14 +78,6 @@
   ></div>
 </main>
 
-<a class="Back" href="/days/1" aria-label="Go To Previous Page">
-  <button> ⇦ </button>
-</a>
-
-<a class="Next" href="/days/3" aria-label="Go To Next Page">
-  <button> ⇨ </button>
-</a>
-
 <FooterCopyright
   aClass="hover:underline"
   href="https://github.com/AbhiTheModder"
