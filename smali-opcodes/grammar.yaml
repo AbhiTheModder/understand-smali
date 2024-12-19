@@ -1,0 +1,112 @@
+# Description: This file contains the grammar for the smalig language. In other words Dalvik Bytecode Opcodes.
+# Some info to take note of before reading:
+# - opcode: The hexadecimal representation of the opcode.
+# - name: The name of the opcode.
+# - format: The format of the opcode. For more read: https://source.android.com/docs/core/runtime/instruction-formats
+# - format_id: The format id of the opcode.
+# - syntax: The Usual syntax of the opcode.
+# - args_info: The information about the arguments of the opcode.
+# - short_desc: A short description of the opcode.
+# - long_desc: A long description of the opcode.
+# - note: Any additional notes about the opcode.
+# - example: An example of the opcode.
+# - example_desc: A description of the example.
+# Register informations:
+# - vA: It is always a destination register on this document and a single <A> represents a 4-bit register, i.e, first 16 registers (0-15).
+# As such vAA represents an 8-bit register, i.e, first 256 registers (0-255), and vAAAA represents a 16-bit register, i.e, first 64k registers (0-65535).
+# - vB: It is always a source register on this document and denotion of <B> is same as <A>.
+- opcode: "00"
+  name: "nop"
+  format: "ØØ|op"
+  format_id: "10x"
+  syntax: "nop"
+  args_info: ""
+  short_desc: "No operation"
+  long_desc: "Does nothing, Waste cycles."
+  note: "Data-bearing pseudo-instructions are tagged with this opcode, in which case the high-order byte of the opcode unit indicates the nature of the data. See \"packed-switch-payload Format\", \"sparse-switch-payload Format\", and \"fill-array-data-payload Format\"."
+  example: "0000 - nop"
+  example_desc: "Does nothing, Waste cycles"
+
+- opcode: "01"
+  name: "move"
+  format: "B|A|op"
+  format_id: "12x"
+  syntax: "move vA, vB"
+  args_info: "A: destination register (4 bits), B: source register (4 bits)"
+  short_desc: "Move the contents of one non-object register to another."
+  long_desc: "Moves the content of vB into vA. Both registers must be in the first 16 register range (0-15)."
+  note: ""
+  example: "0110 - move v0, v1"
+  example_desc: "Moves the content of v1 into v0."
+
+- opcode: "02"
+  name: "move/from16"
+  format: "AA|op BBBB"
+  format_id: "22x"
+  syntax: "move/from16 vAA, vBBBB"
+  args_info: "A: destination register (8 bits), B: source register (16 bits)"
+  short_desc: "Move the contents of one non-object register to another."
+  long_desc: "Moves the content of vB into vA. vB must be in the 64k register range (0-65535) while vA is one of the first 256 registers (0-255)."
+  note: ""
+  example: "0200 1900 - move/from16 v0, v25"
+  example_desc: "Moves the content of v25 into v0."
+
+- opcode: "03"
+  name: "move/16"
+  format: "ØØ|op AAAA BBBB"
+  format_id: "32x"
+  syntax: "move/16 vAAAA, vBBBB"
+  args_info: "A: destination register (16 bits), B: source register (16 bits)"
+  short_desc: "Move the contents of one non-object register to another."
+  long_desc: "Moves the content of vB into vA. Both registers must be in the first 64k register range (0-65535) & 16 bits."
+  note: ""
+  example: "030000090181 - move/16 v2304, v33025"
+  example_desc: "Moves the content of v33025 into v2304."
+
+- opcode: "04"
+  name: "move-wide"
+  format: "B|A|op"
+  format_id: "12x"
+  syntax: "move-wide vA, vB"
+  args_info: "A: destination register pair (4 bits), B: source register pair (4 bits)"
+  short_desc: "Move the contents of one register-pair to another."
+  long_desc: "Move the value of the (vB, vB+1) register-pair to the (vA, vA+1) register-pair. Both register pairs must be in the first 16 register range (0-15)."
+  note: "It is legal to move from vN to either vN-1 or vN+1, so implementations must arrange for both halves of a register pair to be read before anything is written."
+  example: "" #TODO: Add example
+  example_desc: ""
+
+- opcode: "05"
+  name: "move-wide/from16"
+  format: "AA|op BBBB"
+  format_id: "22x"
+  syntax: "move-wide/from16 vAA, vBBBB"
+  args_info: "A: destination register pair (8 bits), B: source register pair (16 bits)"
+  short_desc: "Move the contents of one register-pair to another."
+  long_desc: "Move the value (long/double) of the (vBBBB, vBBBB+1) register-pair to the (vAA, vAA+1) register-pair. vB must be in the 64k register range (0-65535) while vA is one of the first 256 registers (0-255)."
+  note: "It is legal to move from vN to either vN-1 or vN+1, so implementations must arrange for both halves of a register pair to be read before anything is written."
+  example: "0516 0000 - move-wide/from16 v22, v0"
+  example_desc: "Moves v0 into v22."
+
+- opcode: "06"
+  name: "move-wide/16"
+  format: "ØØ|op AAAA BBBB"
+  format_id: "32x"
+  syntax: "move-wide/from16 vAAAA, vBBBB"
+  args_info: "A: destination register pair (16 bits), B: source register pair (16 bits)"
+  short_desc: "Move the contents of one register-pair to another."
+  long_desc: "Move the value of the (vBBBB, vBBBB+1) register-pair to the (vAAAA, vAAAA+1) register-pair. Both register pairs must be in the first 64k register range (0-65535) & 16 bits."
+  note: "It is legal to move from vN to either vN-1 or vN+1, so implementations must arrange for both halves of a register pair to be read before anything is written."
+  example: "" #TODO: Add example
+  example_desc: ""
+
+- opcode: "28"
+  name: "goto"
+  format: "AA|op"
+  format_id: "10t"
+  syntax: "goto target"
+  args_info: "target: signed branch offset (8 bits)"
+  short_desc: "Unconditionally jump to the indicated instruction."
+  long_desc: "Unconditionally jump to the indicated short (8 bits) instruction offset."
+  note: "The branch offset must not be 0. (A spin loop may be legally constructed either with goto/32 or by including a nop as a target before the branch.)"
+  example: "28E9 - goto 0x000150EA"
+  example_desc: "Jumps to the instruction at address 0x000150EA."
