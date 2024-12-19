@@ -4,7 +4,7 @@
   import { parse } from "yaml";
   import { onMount } from "svelte";
 
-  const yaml_file = "src/assets/grammar.yaml";
+  const yaml_file = "/grammar.yaml";
 
   let yamlData = [];
   let filteredData = [];

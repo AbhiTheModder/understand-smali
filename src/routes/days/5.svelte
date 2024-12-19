@@ -393,14 +393,6 @@
     /* margin-left: 100px; */
   }
 
-  .pre {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    overflow-x: auto;
-    margin-left: 0%;
-    font-family: monospace;
-  }
-
   .Next,
   .Back {
     position: fixed;
