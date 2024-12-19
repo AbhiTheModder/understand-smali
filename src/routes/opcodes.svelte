@@ -45,9 +45,10 @@
           <tr>
             <th>Opcode</th>
             <th>Name</th>
-            <th>Format</th>
+            <th>Format & ID</th>
             <th>Syntax</th>
             <th>Short Description</th>
+            <th>Long Description</th>
             <th>Example</th>
           </tr>
         </thead>
@@ -56,9 +57,13 @@
               <tr>
               <td>{instruction.opcode}</td>
               <td>{instruction.name}</td>
-              <td>{instruction.format}</td>
+              <td>
+                <strong>{instruction.format}</strong><br />
+                <small>{instruction.format_id}</small>
+              </td>
               <td>{instruction.syntax}</td>
               <td>{instruction.short_desc}</td>
+              <td>{instruction.long_desc}</td>
               <td>
                 <strong>{instruction.example}</strong><br />
                 <small>{instruction.example_desc}</small>
