@@ -1,6 +1,6 @@
 # Smali-Helper
 
-<b> This folder contains Awesome app Redevloped by Anant Kumar Vivek to understand smali </b>
+<b> This folder contains Awesome app Re-devloped(https://t.me/Smali_Helper) by Anant Kumar Vivek to understand smali </b>
 
 ## NOTE:
 
