@@ -17,12 +17,12 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: RevEngiSquad/smalig
-          path: /tmp/smalig
+          path: smalig
 
       - name: Update file
         run: |
-          mv /tmp/smalig/smalig/grammar.yaml ./smali-opcodes/grammar.yaml
-          rm -r /tmp/smalig
+          mv ./smalig/smalig/grammar.yaml ./smali-opcodes/grammar.yaml
+          rm -r smalig
 
       - name: Commit changes
         run: |
