@@ -6,7 +6,7 @@ This repo is for beginners in reverse engineering (Android), who keep wondering 
 
 # Wiki
 > [!TIP]
-> repo wiki page: [understand-smali.wiki](https://github.com/AbhiTheModder/understand-smali.wiki.git).
+> repo wiki page: [understand-smali.wiki](https://github.com/AbhiTheModder/understand-smali/wiki).
 > 
 > web page: [https://smali.pages.dev](https://smali.pages.dev).
 >
