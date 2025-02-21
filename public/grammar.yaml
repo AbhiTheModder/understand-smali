@@ -27,7 +27,7 @@
   args_info: ""
   short_desc: "No operation"
   long_desc: "Does nothing, Waste cycles."
-  note: 'Data-bearing pseudo-instructions are tagged with this opcode, in which case the high-order byte of the opcode unit indicates the nature of the data. See "packed-switch-payload Format", "sparse-switch-payload Format", and "fill-array-data-payload Format".'
+  note: "Data-bearing pseudo-instructions are tagged with this opcode, in which case the high-order byte of the opcode unit indicates the nature of the data. See `packed-switch-payload Format`, `sparse-switch-payload Format`, and `fill-array-data-payload Format`."
   example: "0000 - nop"
   example_desc: "Does nothing, Waste cycles"
 
@@ -399,7 +399,7 @@
   args_info: "A: reference-bearing register (8 bits), B: type index (16 bits)"
   short_desc: "Throw a ClassCastException if the reference in the given register cannot be cast to the indicated type."
   long_desc: "Check that the object referenced by vAA is an instance of the class resolved by type@BBBB. If it is not, throw a ClassCastException."
-  note: "Since 'A' must always be a reference (and not a primitive value), this will necessarily fail at runtime (that is, it will throw an exception) if 'B' refers to a primitive type."
+  note: "Since $A$ must always be a reference (and not a primitive value), this will necessarily fail at runtime (that is, it will throw an exception) if $B$ refers to a primitive type."
   example: "1F04 0100 - check-cast v4, Test3 #type@0001"
   example_desc: "Checks whether the object reference in v4 can be cast to type@0001 (entry #1 in the type id table) and throws a ClassCastException if it cannot."
 
@@ -411,7 +411,7 @@
   args_info: "A: destination register (4 bits), B: reference-bearing register (4 bits), C: type index (16 bits)"
   short_desc: "Store in the given destination register 1 if the indicated reference is an instance of the given type, or 0 if not."
   long_desc: "Check whether the object referenced by vB is an instance of the class resolved by type@CCCC. If it is, the value 1 is stored in vA; otherwise, the value 0 is stored in vA."
-  note: "Since 'B' must always be a reference (and not a primitive value), this will always result in 0 being stored if C refers to a primitive type. In short, This will always result in 0 if the type is primitive."
+  note: "Since $B$ must always be a reference (and not a primitive value), this will always result in 0 being stored if C refers to a primitive type. In short, This will always result in 0 if the type is primitive."
   example: "2040 0100 - instance-of v0, v4, type@0001"
   example_desc: "Checks whether the object reference in v4 is an instance of type@0001 (entry #1 in the type id table) and stores the result in v0."
 
