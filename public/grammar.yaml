@@ -241,7 +241,7 @@
   format_id: "11n"
   syntax: "const/4 vA, #+B"
   args_info: "A: destination register (4 bits), B: signed int (4 bits)"
-  short_disc: "Move the given literal value (sign-extended to 32 bits) into the specified register."
+  short_desc: "Move the given literal value (sign-extended to 32 bits) into the specified register."
   long_desc: "Moves the literal value B into vA. B is sign-extended to 32 bits. The value of B is in the range -8 to 7 (-0x8 to 0x7)."
   note: ""
   example: "1200 0001 - const/4 v0, 0x1"
