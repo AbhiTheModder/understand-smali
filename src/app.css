@@ -19,6 +19,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -64,9 +65,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #5a95da;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -77,10 +80,77 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
+}
+
+.descriptor-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.descriptor-table th,
+.descriptor-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.descriptor-table th {
+  background-color: #f4f4f4;
+  border-bottom: 2px solid #ddd;
+}
+
+.descriptor-table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.descriptor-table tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* For dark mode compatibility */
+@media (prefers-color-scheme: dark) {
+  .descriptor-table th {
+    background-color: #2d2d2d;
+    border-color: #444;
+  }
+
+  .descriptor-table td {
+    border-color: #444;
+  }
+
+  .descriptor-table tr:nth-child(even) {
+    background-color: #2a2a2a;
+  }
+
+  .descriptor-table tr:hover {
+    background-color: #333;
+  }
+}
+
+.note-block {
+  border-left: 4px solid #a7abaf;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+}
+
+.note-block p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.note-block code {
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 13px;
+  color: #d73a49;
 }

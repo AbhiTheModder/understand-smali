@@ -61,7 +61,8 @@
 
   <Menu {open} />
   <div class="mainbody">
-    <h1 id="h1">Smali vs Java</h1>
+    <h1 id="h1">Smali</h1>
+    <h2 id="h2">Smali vs Java</h2>
     <h4 id="h4">The First Question which may come to your mind is:</h4>
     <li class="li">
       If the Apps are made in Java then what is this smali and why is it
@@ -285,6 +286,479 @@
     <br />
     <p><b>Line 13: </b><code>.end method</code></p>
     <p>marks the end of the method.</p>
+    <h3 id="class-header">Class Header</h3>
+    <p>
+      Okay, so we looked at a full example. Now, let&#39;s zoom in on the very
+      top of a <code>smali</code> file. Think of it like the title and
+      introduction of a book – it tells you some important things about what
+      you&#39;re about to read! This top part is called the
+      <em>Class Header</em>.
+    </p>
+    <p>
+      Imagine the <em>Class Header</em> is like a little information card for
+      the class. It <em>always</em> has a couple of important pieces of
+      information, and <em>sometimes</em> it has a few extra details.
+    </p>
+    <p>
+      Here are the important things you&#39;ll find in the <em>Class Header</em
+      >:
+    </p>
+    <ul>
+      <li>
+        <code style="color: chocolate;">.class</code>: (Must-have!) We learned
+        this before. It tells you what the class is called (like a name tag!).
+      </li>
+      <li>
+        <code style="color: chocolate;">.super</code>: (Must-have!) We learned
+        this too. This is like saying "This class is a type of..." It tells you
+        what "parent" class this class comes from (like saying "a dog is a type
+        of animal").
+      </li>
+      <li>
+        <code style="color: chocolate;">.source</code>: (Nice to have, but not
+        always there!) This tells you the name of the original
+        <code>.java</code>
+        file that this
+        <code>smali</code> code came from. It&#39;s like saying "This recipe came
+        from Grandma&#39;s cookbook."
+      </li>
+      <li>
+        <code style="color: chocolate;">.implements</code>: (Sometimes there!)
+        This tells you if the class follows specific "rules" or promises to do
+        certain things. Imagine it&#39;s like a scout promising to be helpful
+        and kind. This directive is used to specify that the current class
+        implements one or more interfaces. When a class implements an interface,
+        it must provide concrete implementations for all the methods declared in
+        the interface. Example: In Java, you can write:
+        <Highlight
+          language={java}
+          code={`package com.example;
+
+class ExampleClass implements MyInterface {
+    // Class implementation
+}`}
+          let:highlighted
+        >
+          <LineNumbers {highlighted} wrapLines={true} style={codeStyle} />
+        </Highlight>
+        <p>In Smali, this would be represented as:</p>
+        <Highlight
+          language={java}
+          code={`.class public Lcom/example/ExampleClass;
+.super Ljava/lang/Object;
+.source "ExampleClass.java"
+.implements Lcom/example/MyInterface;`}
+          let:highlighted
+        >
+          <LineNumbers {highlighted} wrapLines={true} style={codeStyle} />
+        </Highlight>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <code style="color: chocolate;">.debug</code>: (Rare to see!)
+        <ul>
+          <li>
+            This directive is used to enable or disable debugging information
+            for the class. When debugging information is enabled, the Smali code
+            will include additional information that can be useful for debugging
+            purposes. It&#39;s practical implementation is hardly seen in the
+            wild.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h3 id="annotations">Annotations</h3>
+    <p>
+      Annotations in Smali are similar to annotations in Java. They provide
+      metadata about the class, method, or field, such as its visibility or
+      whether it is deprecated.
+    </p>
+    <p>
+      They are declared using the <code style="color: chocolate;"
+        >.annotation</code
+      >
+      directive, followed by the annotation&#39;s visibility (e.g.,
+      <code>runtime</code>,
+      <code>system</code>, <code>build</code>) and the annotation&#39;s type
+      descriptor and any associated elements. The annotation block is terminated
+      by the <code>.end annotation</code> directive.
+    </p>
+    <p>Here are some examples of annotations in Smali:</p>
+    <Highlight
+      language={java}
+      code={`.class public Lcom/example/ExampleClass;
+.super Ljava/lang/Object;
+
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
+.annotation system Ldalvik/annotation/EnclosingClass;
+  value = Lcom/example/OuterClass;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+  accessFlags = 0x0002
+  name = "ExampleClass"
+  outer = Lcom/example/OuterClass;
+.end annotation
+
+# class definition and methods go here`}
+      let:highlighted
+    >
+      <LineNumbers {highlighted} wrapLines={true} style={codeStyle} />
+    </Highlight>
+    <p>In this example:</p>
+    <ul>
+      <li>
+        <code style="color: chocolate;">@Deprecated</code>: This is a
+        <strong>runtime annotation</strong>
+        (indicated by <code>runtime</code>) with the descriptor
+        <code>Ljava/lang/Deprecated;</code>. It signifies that the
+        <code>ExampleClass</code> is deprecated and should no longer be used.
+      </li>
+      <li>
+        <code style="color: chocolate;">@EnclosingClass</code>: This is a
+        <strong>system annotation</strong>
+        (indicated by <code>system</code>) with the descriptor
+        <code>Ldalvik/annotation/EnclosingClass;</code>. The <code>value</code>
+        element specifies that <code>ExampleClass</code> is enclosed within the
+        <code>Lcom/example/OuterClass;</code>.
+      </li>
+      <li>
+        <code style="color: chocolate;">@InnerClass</code>: This is another
+        <strong>system annotation</strong>
+        with the descriptor <code>Ldalvik/annotation/InnerClass;</code>. It
+        indicates that <code>ExampleClass</code> is an inner class. The
+        annotation includes elements specifying the <code>accessFlags</code>
+        (here, <code>0x0002</code>, indicating it&#39;s a private inner class,
+        you can read more about access flags at
+        <a
+          href="https://jakewharton.github.io/dalvik-dx/docs/latest/com/android/dx/rop/code/AccessFlags.html"
+          >https://jakewharton.github.io/dalvik-dx/docs/latest/com/android/dx/rop/code/AccessFlags.html</a
+        >), the <code>name</code> of the inner class ("ExampleClass"), and the
+        <code>outer</code>
+        class (<code>Lcom/example/OuterClass;</code>).
+      </li>
+    </ul>
+    <Highlight
+      language={java}
+      code={`public static final Parcelable.Creator<j> CREATOR = new i(0);`}
+    />
+    <p>
+      The equivalent Smali code with an annotation for the field&#39;s generic
+      signature would look like:
+    </p>
+    <Highlight
+      language={java}
+      code={`.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+
+.annotation system Ldalvik/annotation/Signature;
+  value = {
+    "Landroid/os/Parcelable$Creator<",
+    "LC1/j;",
+    ">;"
+  }
+.end annotation
+
+.end field`}
+      let:highlighted
+    >
+      <LineNumbers {highlighted} wrapLines={true} style={codeStyle} />
+    </Highlight>
+    <p>
+      Here, the <code style="color: chocolate;">@Signature</code> annotation (<code
+        >Ldalvik/annotation/Signature;</code
+      >) specifies that the <code>CREATOR</code> field is a
+      <code>Parcelable.Creator</code>
+      parameterized with the type <code>C1/j</code>. This preserves the generic
+      type information from the original Java code.
+    </p>
+    <p><strong>Annotation visibility:</strong></p>
+    <ul>
+      <li>
+        <code style="color: chocolate;">system</code>: This annotation is
+        visible to the virtual machine but not to the Java code.
+      </li>
+      <li>
+        <code style="color: chocolate;">runtime</code>: This annotation is
+        visible to the Java code at runtime and can be accessed using
+        reflection.
+      </li>
+      <li>
+        <code style="color: chocolate;">build</code>: This annotation is used
+        during the build process and is not visible at runtime.
+      </li>
+    </ul>
+    <h3 id="fields">Fields</h3>
+    <p>
+      Fields in Smali are defined using the <code style="color: chocolate;"
+        >.field</code
+      > directive within a class. Each field has a name, type, access modifiers and
+      optionally an initial value. The syntax for defining a field is as follows:
+    </p>
+    <Highlight
+      language={java}
+      code={`.field [access_flags] field_name:field_type [= initial_value]`}
+    />
+    <p>Where:</p>
+    <ul>
+      <li>
+        <code style="color: chocolate;">access_flags</code>: Optional access
+        modifiers (e.g.,
+        <code style="color: chocolate;">public</code>,
+        <code style="color: chocolate;">private</code>,
+        <code style="color: chocolate;">static</code>, etc.).
+      </li>
+      <li>
+        <code style="color: chocolate;">field_name</code>: The name of the
+        field.
+      </li>
+      <li>
+        <code style="color: chocolate;">field_type</code>: The type of the field
+        (e.g., <code style="color: chocolate;">I</code> for integer,
+        <code style="color: chocolate;">Ljava/lang/String;</code> for a string, etc.).
+      </li>
+      <li>
+        <code style="color: chocolate;">initial_value</code>: Optional initial
+        value for the field.
+      </li>
+    </ul>
+    <p><strong>Example:</strong></p>
+    <Highlight
+      language={java}
+      code={`.field public static final myField:I = 42
+.field private myString:Ljava/lang/String; = "Hello, Smali!"
+.field public myBoolean:Z`}
+      let:highlighted
+    >
+      <LineNumbers {highlighted} wrapLines={true} style={codeStyle} />
+    </Highlight>
+    <p>
+      here, <code style="color: chocolate;">myField</code> is a public static
+      final integer field i.e, it can be accessed from anywhere, is a constant
+      and is of type integer with an initial value of <code>42</code>.
+      <code style="color: chocolate;">myString</code>
+      is a private field of type string with an initial value of "Hello, Smali!".
+      <code style="color: chocolate;">myBoolean</code> is a public field of type
+      boolean with no initial value specified.
+    </p>
+    <p>
+      <strong id="access-modifiers">Access Modifiers:</strong>
+      Access modifiers in Smali are used to control the visibility and accessibility
+      of fields and methods. The common access modifiers are:
+    </p>
+    <ul>
+      <li>
+        <code style="color: chocolate;">public</code>: The field or method is
+        accessible from any other class.
+      </li>
+      <li>
+        <code style="color: chocolate;">private</code>: The field or method is
+        accessible only within the class it is defined in.
+      </li>
+      <li>
+        <code style="color: chocolate;">protected</code>: The field or method is
+        accessible within the class and its subclasses.
+      </li>
+      <li>
+        <code style="color: chocolate;">static</code>: The field or method
+        belongs to the class itself rather than to instances of the class.
+      </li>
+      <li>
+        <code style="color: chocolate;">final</code>: The field is a constant
+        and cannot be changed after initialization.
+      </li>
+      <li>
+        <code style="color: chocolate;">volatile</code>: The field is volatile
+        and changes to it are immediately visible to other threads.
+      </li>
+      <li>
+        <code style="color: chocolate;">transient</code>: The field is not
+        serialized when the object is serialized.
+      </li>
+      <li>
+        <code style="color: chocolate;">synthetic</code>: The field is generated
+        by the compiler and is not explicitly defined in the source code.
+      </li>
+      <li>
+        <code style="color: chocolate;">enum</code>: The field is an enumeration
+        type.
+      </li>
+      <li>
+        <code style="color: chocolate;">abstract</code>: The method is abstract
+        and must be implemented by subclasses.
+      </li>
+      <li>
+        <code style="color: chocolate;">native</code>: The method is implemented
+        in native code (e.g., C/C++).
+      </li>
+    </ul>
+    <h3 id="methods">Methods</h3>
+    <p>
+      Methods in Smali are defined using the <code>.method</code> directive. The
+      syntax for defining a method is as follows:
+    </p>
+    <Highlight
+      language={java}
+      code={`.method [access_flags] method_name([parameter_types])return_type
+    .registers number_of_registers
+
+    # method body goes here
+.end method`}
+    />
+    <p>Where:</p>
+    <ul>
+      <li>
+        <code style="color: chocolate;">access_flags</code>: Optional access
+        modifiers (e.g.,
+        <code style="color: chocolate;">public</code>, <code>private</code>,
+        <code>static</code>, etc.).
+      </li>
+      <li>
+        <code style="color: chocolate;">method_name</code>: The name of the
+        method.
+      </li>
+      <li>
+        <code style="color: chocolate;">parameter_types</code>: A list of
+        parameter types enclosed in parentheses. Each type is represented by its
+        Smali descriptor (e.g.,
+        <code>I</code>
+        for integer, <code>Ljava/lang/String;</code> for a string, etc.).
+      </li>
+      <li>
+        <code style="color: chocolate;">return_type</code>: The return type of
+        the method, represented by its Smali descriptor (e.g., <code>V</code>
+        for void, <code>I</code> for integer, <code>Ljava/lang/String;</code>
+        for a string, etc.).
+        <br /><strong>Example:</strong>
+        <Highlight
+          language={java}
+          code={`.method public static myMethod(I)Ljava/lang/String;
+    .registers 2
+
+    const-string v0, "Hello, Smali!"
+
+    return-object v0
+.end method`}
+          let:highlighted
+        >
+          <LineNumbers {highlighted} wrapLines={true} style={codeStyle} />
+        </Highlight>
+      </li>
+    </ul>
+
+    <p>
+      In this example, <code>myMethod</code> is a public static method that
+      takes an integer parameter and returns a string. The method uses two
+      registers (<code>v0</code> and <code>v1</code>) to store intermediate
+      values. It creates a string "Hello, Smali!" and returns it.
+    </p>
+    <h3 id="type-descriptors">Type Descriptors</h3>
+    <p>
+      Type descriptors in Smali are used to represent the types of fields,
+      method parameters and return values. They are similar to Java type
+      descriptors but have a specific syntax. Here are some common type
+      descriptors:
+    </p>
+    <table class="descriptor-table">
+      <thead>
+        <tr>
+          <th>Descriptor</th>
+          <th>Type</th>
+          <th>Value Example (human-readable)</th>
+          <th>Size in Bytes</th>
+        </tr>
+      </thead>
+      <tbody
+        ><tr>
+          <td><code>V</code></td>
+          <td>Void</td>
+          <td><code>-</code></td>
+          <td><code>0</code></td>
+        </tr>
+        <tr>
+          <td><code>Z</code></td>
+          <td>Boolean</td>
+          <td><code>true</code>/<code>false</code></td>
+          <td><code>1</code></td>
+        </tr>
+        <tr>
+          <td><code>B</code></td>
+          <td>Byte</td>
+          <td><code>-128 to 127</code></td>
+          <td><code>1</code></td>
+        </tr>
+        <tr>
+          <td><code>S</code></td>
+          <td>Short</td>
+          <td><code>-32,768 to 32,767</code></td>
+          <td><code>2</code></td>
+        </tr>
+        <tr>
+          <td><code>C</code></td>
+          <td>Character</td>
+          <td><code>&#39;a&#39;</code>, <code>&#39;b&#39;</code>, etc.</td>
+          <td><code>2</code></td>
+        </tr>
+        <tr>
+          <td><code>I</code></td>
+          <td>Integer</td>
+          <td><code>-2,147,483,648 to 2,147,483,647</code></td>
+          <td><code>4</code></td>
+        </tr>
+        <tr>
+          <td><code>F</code></td>
+          <td>Float</td>
+          <td><code>1.4E-45 to 3.4028235E38</code></td>
+          <td><code>4</code></td>
+        </tr>
+        <tr>
+          <td><code>J</code></td>
+          <td>Long</td>
+          <td
+            ><code>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</code
+            ></td
+          >
+          <td><code>8</code></td>
+        </tr>
+        <tr>
+          <td><code>D</code></td>
+          <td>Double</td>
+          <td><code>4.9E-324 to 1.7976931348623157E308</code></td>
+          <td><code>8</code></td>
+        </tr>
+        <tr>
+          <td><code>[</code></td>
+          <td>Array (reference type)</td>
+          <td
+            ><code>[I</code> (array of integers),
+            <code>[Ljava/lang/String;</code> (array of strings)</td
+          >
+          <td><code>-</code></td>
+        </tr>
+        <tr>
+          <td><code>L<class_name>;</class_name></code></td>
+          <td>Object (reference type)</td>
+          <td
+            ><code>Ljava/lang/String;</code> (String object),
+            <code>Lcom/example/MyClass;</code> (custom class)
+          </td>
+          <td><code>-</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note-block">
+      <p>
+        <strong>NOTE</strong>: Unless stated otherwise, all type descriptors are
+        case-sensitive. For example, <code>I</code> is an integer, while
+        <code>i</code> is not a valid type descriptor. Similarly, unless stated
+        otherwise, all type descriptors in the above table are primitive types
+        while
+        <code>L&lt;class_name&gt;;</code> is not a primitive type but a reference
+        type.
+      </p>
+    </div>
   </div>
   <div
     data-chirpy-theme="system"
