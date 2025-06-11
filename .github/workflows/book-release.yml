@@ -36,7 +36,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: understand-smali
-          path: understand-smali.wiki/
+          path: |
+            understand-smali.wiki/understand-smali.pdf
+            understand-smali.wiki/understand-smali.epub
 
   release:
     needs: build
