@@ -12,7 +12,7 @@
     "@sveltejs/vite-plugin-svelte": "^3.0.2",
     "flowbite": "^2.3.0",
     "flowbite-svelte": "^0.46.1",
-    "glob": "^11.0.0",
+    "glob": "^11.1.0",
     "svelte": "^4.2.19",
     "svelte-hamburgers": "^4.2.0",
     "svelte-highlight": "^7.7.0",
