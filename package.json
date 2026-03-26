@@ -21,6 +21,6 @@
     "vite-plugin-html": "^3.2.2"
   },
   "dependencies": {
-    "yaml": "^2.6.1"
+    "yaml": "^2.8.3"
   }
 }
