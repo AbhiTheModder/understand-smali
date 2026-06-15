@@ -1,48 +1,53 @@
-# understand-smali 
-This repo is for beginners in reverse engineering (Android), who keep wondering about everything inside smali.
+# understand-smali
+
+A wiki for beginners in reverse engineering who want to understand smali.
+
+**Website:** [smali.pages.dev](https://smali.pages.dev)
 
 [![Build and Release](https://github.com/AbhiTheModder/understand-smali/actions/workflows/book-release.yml/badge.svg)](https://github.com/AbhiTheModder/understand-smali/actions/workflows/book-release.yml)
 
+## What's inside
 
-# Wiki
-> [!TIP]
-> repo wiki page: [understand-smali.wiki](https://github.com/AbhiTheModder/understand-smali/wiki).
-> 
-> web page: [https://smali.pages.dev](https://smali.pages.dev).
->
-> `PDF/EPUB`: Check out [releases](https://github.com/AbhiTheModder/understand-smali/releases) section
+**Days** is a step-by-step learning path, starting from zero:
 
+| Day | Topic             |
+| --- | ----------------- |
+| 1   | Smali vs Java     |
+| 2   | Basics            |
+| 3   | Registers [local] |
+| 4   | Registers [param] |
+| 5   | Examples          |
+| 6   | CrackMe's         |
+| 7   | Arrays            |
 
-### 🐩 Contributions
+**Instructions** covers specific Dalvik bytecode opcodes in depth:
 
-Contributions of any type are welcome as long as it helps improving the repo/site and better help towards understanding smali. Feel free to do pull-request's with your changes!
+- `invoke-custom`
+- `invoke-polymorphic`
+- `new-instance`
 
-**Working on your first Pull Request?** You can learn how from this _free_ series [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request)
+**Reference material:**
 
+- [Opcodes table](https://smali.pages.dev/opcodes/) with all 256 Dalvik bytecode opcodes
+- [Smali opcodes PDF](https://github.com/AbhiTheModder/understand-smali/blob/main/smali-opcodes/Smali%20-%20Table%20Of%20Java%20Opcode's.pdf)
+- [Smali Helper Android app](https://github.com/AbhiTheModder/understand-smali/tree/main/smali-helper)
+- [Research articles on smali](https://github.com/AbhiTheModder/understand-smali/tree/main/Articles)
 
-## 👨🏻‍💻 Support
+PDF and EPUB versions are available in [releases](https://github.com/AbhiTheModder/understand-smali/releases).
 
-| Telegram Group | Contact Bot |
-|--------|--------|
-| [![](https://img.shields.io/badge/Telegram-black?style=for-the-badge&logo=Telegram "Telegram")](https://t.me/joinchat/xP-wW-A5mIBmMjY1) | [![](https://img.shields.io/badge/Telegram-bot-black?style=for-the-badge&logo=Telegram_bot "Telegram Bot")](https://t.me/QbtaumaiBot) |
+## Contributing
 
+Pull requests welcome. If you see something wrong or missing, open an issue or send a fix.
 
-## 💖 Like my work?
-This project needs a ⭐ from you. Don't forget to leave a ⭐.  
+New to PRs? [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request) is a good starting point.
 
+## Contact
+
+|                | Link                                                                      |
+| -------------- | ------------------------------------------------------------------------- |
+| Telegram group | [t.me/joinchat/xPP-wW-A5mIBmMjY1](https://t.me/joinchat/xP-wW-A5mIBmMjY1) |
+| Telegram bot   | [t.me/QbtaumaiBot](https://t.me/QbtaumaiBot)                              |
 
 ## License
 
-```plaintext
-                    GNU GENERAL PUBLIC LICENSE
-                        Version 3, 29 June 2007
-
-  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
-  Everyone is permitted to copy and distribute verbatim copies
-  of this license document, but changing it is not allowed.
-
-                             Preamble
-
-   The GNU General Public License is a free, copyleft license for
- software and other kinds of works.
-```
+[MIT](LICENSE)
