@@ -1,0 +1,34 @@
+<div class="table-wrapper">
+  <table class="opcodes-table">
+    <thead>
+      <tr>
+        <th>Opcode</th>
+        <th>Name</th>
+        <th>Format &amp; ID</th>
+        <th>Syntax</th>
+        <th>Short Desc</th>
+        <th>Long Desc</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range hugo.Data.grammar }}
+      <tr>
+        <td>{{ .opcode }}</td>
+        <td>{{ .name }}</td>
+        <td>
+          <strong>{{ .format }}</strong><br>
+          <small>{{ .format_id }}</small>
+        </td>
+        <td>{{ .syntax }}</td>
+        <td>{{ .short_desc }}</td>
+        <td>{{ .long_desc }}</td>
+        <td>
+          <strong>{{ .example }}</strong><br>
+          <small>{{ .example_desc }}</small>
+        </td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>

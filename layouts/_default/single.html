@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article class="content-article">
+  <nav class="breadcrumbs">
+    <a href="/">Home</a>
+    {{ with .Parent }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+    <span>{{ .Title }}</span>
+  </nav>
+  {{ .Content }}
+</article>
+{{ partial "nav-prev-next.html" . }}
+<div data-chirpy-theme="system" data-chirpy-comment="true" id="chirpy-comment"></div>
+{{ end }}

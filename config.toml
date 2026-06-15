@@ -1,0 +1,36 @@
+baseURL = "https://smali.pages.dev"
+locale = "en-us"
+title = "understand-smali"
+copyright = "© AbhiTheModder 2024"
+
+[params]
+description = "A wiki for beginners in reverse engineering who want to understand smali"
+favicon = "/java.svg"
+
+[[menu.main]]
+name = "Contents"
+url = "/contents/"
+weight = 1
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 2
+
+[[menu.main]]
+name = "Opcodes"
+url = "/opcodes/"
+weight = 3
+
+[[menu.main]]
+name = "Contact"
+url = "https://t.me/AbhiTheM0dder"
+weight = 4
+
+[markup.highlight]
+style = "monokai"
+codeFences = true
+noClasses = false
+
+[markup.goldmark.renderer]
+unsafe = true

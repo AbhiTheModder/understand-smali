@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article class="content-article">
+  <nav class="breadcrumbs">
+    <a href="/">Home</a>
+    <a href="/contents/">Contents</a>
+    <span>{{ .Title }}</span>
+  </nav>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</article>
+<div data-chirpy-theme="system" data-chirpy-comment="true" id="chirpy-comment"></div>
+{{ end }}

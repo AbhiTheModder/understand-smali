@@ -1,0 +1,8 @@
+<nav id="site-nav">
+  <a href="/" class="nav-brand">understand-smali</a>
+  <div class="nav-links">
+    {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}"{{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
+    {{ end }}
+  </div>
+</nav>

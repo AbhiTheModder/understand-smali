@@ -11,22 +11,24 @@ jobs:
 
     steps:
       - name: Checkout Main repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Checkout smalig repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: RevEngiSquad/smalig
           path: smalig
 
-      - name: Update file
+      - name: Update YAML and convert to JSON
         run: |
-          mv ./smalig/smalig/grammar.yaml ./public/grammar.yaml
+          mv ./smalig/smalig/grammar.yaml ./data/grammar.yaml
           rm -r smalig
+          pip install pyyaml
+          python3 -c "import yaml, json; d=yaml.safe_load(open('data/grammar.yaml')); json.dump(d, open('data/grammar.json','w'), indent=2)"
 
       - name: Commit changes
         run: |
-          git add ./public/grammar.yaml
+          git add ./data/grammar.yaml ./data/grammar.json
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
@@ -38,7 +40,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Update smali-opcodes/grammar.yaml"
+          commit-message: "Update grammar data (YAML + JSON)"
           branch: update-grammar-file
-          title: "Update for grammar file"
-          body: "This PR updates the smali-opcodes/grammar.yaml file with the latest changes."
+          title: "Update grammar data"
+          body: "This PR updates the grammar.yaml and grammar.json files with the latest changes from the smalig repository."
